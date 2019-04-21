@@ -4,6 +4,8 @@ Adjacency List:
   3 : [1 2]
 DFS traversal output:
 1 3 2 
+BFS traversal output:
+1 2 3 
 .........x.........x.........x.........x.........x.........x.........x.........
 
 
@@ -16,6 +18,8 @@ Adjacency List:
   6 : [5]
 DFS traversal output:
 1 3 4 2 
+BFS traversal output:
+1 2 3 4 
 .........x.........x.........x.........x.........x.........x.........x.........
 
 
@@ -28,6 +32,8 @@ Adjacency List:
   6 : [4]
 DFS traversal output:
 1 3 2 
+BFS traversal output:
+1 2 3 
 .........x.........x.........x.........x.........x.........x.........x.........
 
 
@@ -49,6 +55,25 @@ Adjacency List:
  15 : [5 14]
 DFS traversal output:
 1 6 5 15 14 4 13 12 7 9 8 11 10 3 2 
+BFS traversal output:
+1 2 3 4 6 8 9 5 10 13 14 7 15 11 12 
+.........x.........x.........x.........x.........x.........x.........x.........
+
+
+Adjacency List:
+  1 : [2 3]
+  2 : [1 4 5]
+  3 : [1 6 7]
+  4 : [2 8 9]
+  5 : [2]
+  6 : [3]
+  7 : [3]
+  8 : [4]
+  9 : [4]
+DFS traversal output:
+1 3 7 6 2 5 4 9 8 
+BFS traversal output:
+1 2 3 4 5 6 7 8 9 
 .........x.........x.........x.........x.........x.........x.........x.........
 
 
