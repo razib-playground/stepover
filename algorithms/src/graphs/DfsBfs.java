@@ -72,8 +72,9 @@ public class DfsBfs {
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        System.setIn(new FileInputStream(new File("./resources/DFS-BFS.in.txt")));
-        System.setOut(new PrintStream(new File("./resources/DFS-BFS.out.txt")));
+        String projectDir = System.getProperty("user.home") + "/projects/stepover/algorithms";
+        System.setIn(new FileInputStream(new File(projectDir+"/resources/DFS-BFS.in.txt")));
+        System.setOut(new PrintStream(new File(projectDir+"/resources/DFS-BFS.out.txt")));
         Scanner scanner = new Scanner(System.in);
 
         int T = scanner.nextInt();

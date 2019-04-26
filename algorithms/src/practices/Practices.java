@@ -30,8 +30,9 @@ public class Practices {
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        System.setIn(new FileInputStream(new File("./resources/practices/Practices.in.txt")));
-        System.setOut(new PrintStream(new File("./resources/practices/Practices.out.txt")));
+        String projectDir = System.getProperty("user.home") + "/projects/stepover/algorithms";
+        System.setIn(new FileInputStream(new File(projectDir+"/resources/practices/Practices.in.txt")));
+        System.setOut(new PrintStream(new File(projectDir+"/resources/practices/Practices.out.txt")));
         Scanner scanner = new Scanner(System.in);
 
         int q = scanner.nextInt();
