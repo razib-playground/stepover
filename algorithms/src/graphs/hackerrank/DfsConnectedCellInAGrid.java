@@ -6,6 +6,7 @@ import java.util.Scanner;
 /*
 Link: https://www.hackerrank.com/challenges/ctci-connected-cell-in-a-grid/problem
  */
+@SuppressWarnings("Duplicates")
 public class DfsConnectedCellInAGrid {
 
     public static void main(String[] args) throws FileNotFoundException {
@@ -37,7 +38,7 @@ public class DfsConnectedCellInAGrid {
 
         for (int row = 0; row < matrix.length; row++) {
             for (int column = 0; column < matrix[0].length; column++) {
-                if(matrix[row][column] ==1){
+                if (matrix[row][column] == 1) {
                     int size = getRegionSize(matrix, row, column);
                     maxRegion = Math.max(size, maxRegion);
                 }
@@ -47,12 +48,12 @@ public class DfsConnectedCellInAGrid {
     }
 
     private static int getRegionSize(int[][] matrix, int row, int column) {
-        if(matrix==null ||row<0|| row>=matrix.length || column<0 || column>=matrix[row].length) return 0;
-        if(matrix[row][column] == 0 ) return 0;
+        if (matrix == null || row < 0 || row >= matrix.length || column < 0 || column >= matrix[row].length) return 0;
+        if (matrix[row][column] == 0) return 0;
 
         matrix[row][column] = 0;
         int size = 1;
-        for (int r = row-1; r<=row+1; r++) {
+        for (int r = row - 1; r <= row + 1; r++) {
             for (int c = column - 1; c <= column + 1; c++) {
                 if (r != row || c != column) {
                     size += getRegionSize(matrix, r, c);

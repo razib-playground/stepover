@@ -3,9 +3,7 @@ package practices;
 import java.io.*;
 import java.util.*;
 
-/**
- * Created by fakrul on 4/20/19.
- */
+@SuppressWarnings("Duplicates")
 public class Practices {
 
     private static int[] bfs(int nNodes, int nEdges, List<Set<Integer>> adjacencyList, int source) {
