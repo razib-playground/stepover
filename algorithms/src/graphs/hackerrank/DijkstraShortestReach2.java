@@ -19,8 +19,8 @@ public class DijkstraShortestReach2 {
         System.setOut(new PrintStream(new File(projectDir + "/resources/DijkstraShortestReach2.out.txt")));
         Scanner scanner = new Scanner(System.in);
 
-        int testCase = scanner.nextInt();
-        while (testCase-- > 0) {
+        int testCases = scanner.nextInt();
+        while (testCases-- > 0) {
             int nNodes = scanner.nextInt();
             int nEdges = scanner.nextInt();
             int[][] costs = new int[nNodes][nNodes];
@@ -43,6 +43,7 @@ public class DijkstraShortestReach2 {
             distances[source] = 0;
             for (int i = 0; i < nNodes - 1; i++) {
 
+                //finding the vertex of minimum distances of current node
                 int index = 0;
                 int min = Integer.MAX_VALUE;
                 for (int j = 0; j < nNodes; j++) {
