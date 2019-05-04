@@ -1,108 +1,69 @@
-package  practices;
+package practices;
 
 import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
 
-class Pair implements Comparable<Pair> {
-
-    public int x;
-    public int c;
-
-    Pair(int x, int c) {
-        this.x = x;
-        this.c = c;
-    }
-
-    public int compareTo(Pair b) {
-        return (b.c < this.c) ? 1 : -1;
-    }
-}
-
+/**
+ * Created by fakrul on 5/4/19.
+ */
 
 public class Solution {
 
-    public static ArrayList<HashMap<Integer, Integer>> adj;
-    public static int[] shortestPaths;
-
-    public static void dijkstra(int s) {
-        shortestPaths = new int[adj.size()];
-        for (int i = 0; i < adj.size(); i++) {
-            shortestPaths[i] = Integer.MAX_VALUE;
-        }
-        shortestPaths[s] = 0;
-        boolean[] visited = new boolean[adj.size()];
-        PriorityQueue<Pair> queue = new PriorityQueue<>();
-        queue.add(new Pair(s, 0));
-
-        while (!queue.isEmpty()) {
-            Pair current = queue.poll();
-            if (!visited[current.x]) {
-                visited[current.x] = true;
-                Iterator<Map.Entry<Integer, Integer>> entries = adj.get(current.x).entrySet().iterator();
-
-                while (entries.hasNext()) {
-                    Map.Entry<Integer, Integer> entry = entries.next();
-                    if (current.c + entry.getValue() < shortestPaths[entry.getKey()]) {
-                        shortestPaths[entry.getKey()] = current.c + entry.getValue();
-                        if (!visited[entry.getKey()]) {
-                            queue.add(new Pair(entry.getKey(), shortestPaths[entry.getKey()]));
-                        }
-                    }
-                }
-            }
-        }
-    }
+    private static int nNodes;
+    private static int nEdges;
 
     public static void main(String[] args) {
-        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-        try {
-            int t = Integer.parseInt(in.readLine());
-            for (int i = 0; i < t; i++) {
-                String[] stmp = in.readLine().split(" ");
-                int n = Integer.parseInt(stmp[0]);
-                int m = Integer.parseInt(stmp[1]);
+        Scanner scanner = new Scanner(System.in);
 
-                adj = new ArrayList<HashMap<Integer, Integer>>();
-                for (int j = 0; j < n; j++) {
-                    adj.add(new HashMap<>());
-                }
-
-                for (int j = 0; j < m; j++) {
-                    stmp = in.readLine().split(" ");
-                    int x = Integer.parseInt(stmp[0]);
-                    int y = Integer.parseInt(stmp[1]);
-                    int r = Integer.parseInt(stmp[2]);
-                    x--;
-                    y--;
-
-                    if (!adj.get(x).containsKey(y) || adj.get(x).get(y) > r) {
-                        adj.get(x).put(y, r);
-                    }
-                    if (!adj.get(y).containsKey(x) || adj.get(y).get(x) > r) {
-                        adj.get(y).put(x, r);
-                    }
-                }
-
-                int s = Integer.parseInt(in.readLine());
-                s--;
-                dijkstra(s);
-                StringBuilder out = new StringBuilder("");
-                for (int j = 0; j < n; j++) {
-                    if (s != j) {
-                        if (shortestPaths[j] == Integer.MAX_VALUE) {
-                            out.append("-1 ");
-                        } else {
-                            out.append(shortestPaths[j]);
-                            out.append(" ");
-                        }
-                    }
-                }
-                out.append("\n");
-                System.out.print(out.toString());
+        int tests = scanner.nextInt();
+        while (tests-- > 0) {
+            int nNodes = scanner.nextInt();
+            int nEdges = scanner.nextInt();
+            int[][] a = new int[nNodes][nNodes];
+            for (int i = 0; i < nEdges; i++) {
+                int x = scanner.nextInt() - 1;
+                int y = scanner.nextInt() - 1;
+                int r = scanner.nextInt();
+                if (a[x][y] == 0 || (a[x][y] != 0 && a[x][y] > r)) a[x][y] = r;
+                a[y][x] = a[x][y];
             }
-        } catch (Exception e) {
+            int source = scanner.nextInt() - 1;
+
+            int[] distances = new int[nNodes];
+            int[] visited = new int[nNodes];
+            Arrays.fill(distances, Integer.MAX_VALUE);
+
+            distances[source] = 0;
+            for (int i = 0; i < nNodes; i++) {
+                //find min distance in visited
+                int index = 0;
+                int min = Integer.MAX_VALUE;
+                for (int j = 0; j < nNodes; j++)
+                    if (visited[j] == 0 && distances[j] < min) {
+                        index = j;
+                        min = distances[j];
+                    }
+
+                visited[index] = 1;
+                for (int j = 0; j < nNodes; j++)
+                    if (visited[j] == 0 && a[index][j] != 0 &&
+                            distances[index] != Integer.MAX_VALUE && distances[j] > distances[index] + a[index][j])
+                        distances[j] = distances[index] + a[index][j];
+
+            }
+
+            for (int i = 0; i < nNodes; i++){
+                if (i != source){
+                    if(distances[i] == Integer.MAX_VALUE) System.out.print("-1 ");
+                    else System.out.print(distances[i] + " ");
+                }
+
+            }
+            System.out.println();
         }
+
+        scanner.close();
+
     }
+
 }
