@@ -33,10 +33,8 @@ public class Solution {
             }
             int source = scanner.nextInt() - 1;
 
-            //dijkstra algorithm
             int[] distances = new int[nNodes];
             boolean[] visited = new boolean[nNodes];
-            Arrays.fill(distances, Integer.MAX_VALUE);
 
             distances[source] = 0;
             for (int i = 0; i < nNodes - 1; i++) {
@@ -54,7 +52,7 @@ public class Solution {
                 visited[index] = true;
                 for (int j = 0; j < nNodes; j++) {
                     if (costs[index][j] != 0 && !visited[j] && distances[index] != Integer.MAX_VALUE
-                            && distances[j] > (distances[index] + costs[index][j])) {
+                            && distances[j] >(distances[index] + costs[index][j])) {
                         distances[j] = distances[index] + costs[index][j];
                     }
                 }
@@ -69,6 +67,7 @@ public class Solution {
                 }
             }
             System.out.println();
+
         }
 
         scanner.close();
