@@ -5,6 +5,7 @@ package graphs;
 import java.io.*;
 import java.util.*;
 
+@SuppressWarnings("Duplicates")
 public class Prims {
 
     public static void main(String[] args) throws FileNotFoundException {
@@ -19,12 +20,12 @@ public class Prims {
             int nNodes = scanner.nextInt();
             int nEdges = scanner.nextInt();
             Map<Integer, Set<Edge>> graph = new HashMap<>();
-            List<Edge> mst = new ArrayList<>();
 
             for (int i = 0; i < nEdges; i++) {
                 int u = scanner.nextInt();
                 int v = scanner.nextInt();
                 int w = scanner.nextInt();
+
                 if (!graph.containsKey(u)) graph.put(u, new HashSet<>());
                 if (!graph.containsKey(v)) graph.put(v, new HashSet<>());
 
@@ -33,32 +34,34 @@ public class Prims {
             }
             int source = scanner.nextInt();
 
-            boolean[] visited = new boolean[nNodes + 1];
-            int nCount = 0;
-            int mstSum = 0;
+            //Prim's algorithm
             PriorityQueue<Edge> queue = new PriorityQueue<>(new Comparator<Edge>() {
                 @Override
                 public int compare(Edge e1, Edge e2) {
                     return e1.w - e2.w;
                 }
             });
+            boolean[] visited = new boolean[nNodes + 1];
+            List<Edge> mst = new ArrayList<>();
+            int mstSum = 0;
 
             queue.addAll(graph.get(source));
             visited[source] = true;
             while (!queue.isEmpty()) {
-                Edge e = queue.poll();
+                Edge minEdge = queue.poll();
 
-                if (visited[e.u] && visited[e.v]) continue;
-                visited[e.u] = true;
-                for (Edge edge : graph.get(e.v)) {
-                    if (!visited[edge.v]) {
-                        queue.add(edge);
+                if (visited[minEdge.u] && visited[minEdge.v]) continue;
+                visited[minEdge.u] = true;
+                for (Edge otherEdge : graph.get(minEdge.v)) {
+                    if (!visited[otherEdge.v]) {
+                        queue.add(otherEdge);
                     }
                 }
-                visited[e.v] = true;
-                mstSum += e.w;
-                mst.add(e);
+                visited[minEdge.v] = true;
+                mstSum += minEdge.w;
+                mst.add(minEdge);
             }
+            //Prim's Done
 
             System.out.println(mstSum);
             for (Edge e : mst) {
@@ -85,14 +88,15 @@ public class Prims {
 
         @Override
         public int hashCode() {
-            return (String.valueOf(String.valueOf(u).hashCode() +
-                    String.valueOf(v).hashCode() + String.valueOf(w).hashCode())).hashCode();
+            return String.valueOf(String.valueOf(u).hashCode() + String.valueOf(v).hashCode()
+                    + String.valueOf(w).hashCode()).hashCode();
         }
 
         @Override
         public boolean equals(Object obj) {
             if (obj instanceof Edge) {
                 Edge e = (Edge) obj;
+                if (this == e) return true;
                 return (e.u == this.u) && (e.v == this.v) && (e.w == this.w);
             }
             return false;
