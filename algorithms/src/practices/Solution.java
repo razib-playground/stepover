@@ -35,6 +35,7 @@ public class Solution {
 
             int[] distances = new int[nNodes];
             boolean[] visited = new boolean[nNodes];
+            Arrays.fill(distances, Integer.MAX_VALUE);
 
             distances[source] = 0;
             for (int i = 0; i < nNodes - 1; i++) {
