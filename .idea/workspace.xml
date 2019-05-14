@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe7be4c9-1e3f-4ad9-973a-f9816ec2dc0a" name="Default Changelist" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/algorithms/resources/C_Dijkstra.in.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/algorithms/src/graphs/codeforces/C_Dijkstra.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/algorithms/src/graphs/codeforces/C_DijkstraV2.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/resources/DijkstraShortestReach2.in.txt" afterPath="$PROJECT_DIR$/algorithms/resources/DijkstraShortestReach2.in.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/resources/DijkstraShortestReach2.out.txt" afterPath="$PROJECT_DIR$/algorithms/resources/DijkstraShortestReach2.out.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/src/graphs/hackerrank/DijkstraShortestReach2.java" afterPath="$PROJECT_DIR$/algorithms/src/graphs/hackerrank/DijkstraShortestReach2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithms/src/practices/Solution.java" afterPath="$PROJECT_DIR$/algorithms/src/practices/Solution.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,268 +62,119 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="DijkstraShortestReach2.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/algorithms/src/graphs/hackerrank/DijkstraShortestReach2.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="126">
-                  <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#346#432#1" expanded="true" />
-                    <element signature="e#366#431#0" expanded="true" />
-                    <element signature="e#366#431#0" expanded="true" />
-                    <element signature="e#441#541#0" expanded="true" />
-                    <element signature="e#483#538#0" expanded="true" />
-                    <element signature="e#483#538#0" expanded="true" />
-                    <element signature="e#441#541#0" expanded="true" />
-                    <element signature="e#551#649#0" expanded="true" />
-                    <element signature="e#590#646#0" expanded="true" />
-                    <element signature="e#590#646#0" expanded="true" />
-                    <element signature="e#551#649#0" expanded="true" />
-                    <element signature="e#659#700#1" expanded="true" />
-                    <element signature="e#710#744#1" expanded="true" />
-                    <element signature="e#753#2731#0" expanded="true" />
-                    <element signature="e#753#2731#0" expanded="true" />
-                    <element signature="e#791#822#1" expanded="true" />
-                    <element signature="e#835#866#1" expanded="true" />
-                    <element signature="e#879#919#1" expanded="true" />
-                    <element signature="e#933#1273#0" expanded="true" />
-                    <element signature="e#938#948#1" expanded="true" />
-                    <element signature="e#933#1273#0" expanded="true" />
-                    <element signature="e#933#1273#0" expanded="true" />
-                    <element signature="e#933#1273#0" expanded="true" />
-                    <element signature="e#933#1273#0" expanded="true" />
-                    <element signature="e#984#1014#1" expanded="true" />
-                    <element signature="e#1031#1061#1" expanded="true" />
-                    <element signature="e#1078#1109#1" expanded="true" />
-                    <element signature="e#1127#1216#0" expanded="true" />
-                    <element signature="e#1127#1216#0" expanded="true" />
-                    <element signature="e#1286#1321#1" expanded="true" />
-                    <element signature="e#1368#1408#1" expanded="true" />
-                    <element signature="e#1421#1455#1" expanded="true" />
-                    <element signature="e#1559#2384#0" expanded="true" />
-                    <element signature="e#1564#1574#1" expanded="true" />
-                    <element signature="e#1559#2384#0" expanded="true" />
-                    <element signature="e#1559#2384#0" expanded="true" />
-                    <element signature="e#1559#2384#0" expanded="true" />
-                    <element signature="e#1559#2384#0" expanded="true" />
-                    <element signature="e#1689#1703#1" expanded="true" />
-                    <element signature="e#1720#1748#1" expanded="true" />
-                    <element signature="e#1765#1979#0" expanded="true" />
-                    <element signature="e#1770#1780#1" expanded="true" />
-                    <element signature="e#1765#1979#0" expanded="true" />
-                    <element signature="e#1765#1979#0" expanded="true" />
-                    <element signature="e#1765#1979#0" expanded="true" />
-                    <element signature="e#1765#1979#0" expanded="true" />
-                    <element signature="e#1820#1961#0" expanded="true" />
-                    <element signature="e#1820#1961#0" expanded="true" />
-                    <element signature="e#2036#2370#0" expanded="true" />
-                    <element signature="e#2041#2051#1" expanded="true" />
-                    <element signature="e#2036#2370#0" expanded="true" />
-                    <element signature="e#2036#2370#0" expanded="true" />
-                    <element signature="e#2036#2370#0" expanded="true" />
-                    <element signature="e#2036#2370#0" expanded="true" />
-                    <element signature="e#2091#2352#0" expanded="true" />
-                    <element signature="e#2091#2352#0" expanded="true" />
-                    <element signature="e#2439#2687#0" expanded="true" />
-                    <element signature="e#2444#2454#1" expanded="true" />
-                    <element signature="e#2439#2687#0" expanded="true" />
-                    <element signature="e#2439#2687#0" expanded="true" />
-                    <element signature="e#2439#2687#0" expanded="true" />
-                    <element signature="e#2439#2687#0" expanded="true" />
-                    <element signature="e#2490#2673#0" expanded="true" />
-                    <element signature="e#2490#2673#0" expanded="true" />
-                    <element signature="e#2529#2655#0" expanded="true" />
-                    <element signature="e#2529#2655#0" expanded="true" />
-                    <element signature="e#2635#2653#0" expanded="true" />
-                    <element signature="e#2635#2653#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/algorithms/src/practices/Solution.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-369">
-                  <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#242#328#1" expanded="true" />
-                    <element signature="e#262#327#0" expanded="true" />
-                    <element signature="e#262#327#0" expanded="true" />
-                    <element signature="e#337#437#0" expanded="true" />
-                    <element signature="e#379#434#0" expanded="true" />
-                    <element signature="e#379#434#0" expanded="true" />
-                    <element signature="e#337#437#0" expanded="true" />
-                    <element signature="e#447#545#0" expanded="true" />
-                    <element signature="e#486#542#0" expanded="true" />
-                    <element signature="e#486#542#0" expanded="true" />
-                    <element signature="e#447#545#0" expanded="true" />
-                    <element signature="e#555#596#1" expanded="true" />
-                    <element signature="e#606#640#1" expanded="true" />
-                    <element signature="e#649#2649#0" expanded="true" />
-                    <element signature="e#649#2649#0" expanded="true" />
-                    <element signature="e#687#718#1" expanded="true" />
-                    <element signature="e#731#762#1" expanded="true" />
-                    <element signature="e#775#815#1" expanded="true" />
-                    <element signature="e#829#1169#0" expanded="true" />
-                    <element signature="e#834#844#1" expanded="true" />
-                    <element signature="e#829#1169#0" expanded="true" />
-                    <element signature="e#829#1169#0" expanded="true" />
-                    <element signature="e#829#1169#0" expanded="true" />
-                    <element signature="e#829#1169#0" expanded="true" />
-                    <element signature="e#880#910#1" expanded="true" />
-                    <element signature="e#927#957#1" expanded="true" />
-                    <element signature="e#974#1005#1" expanded="true" />
-                    <element signature="e#1023#1112#0" expanded="true" />
-                    <element signature="e#1023#1112#0" expanded="true" />
-                    <element signature="e#1182#1217#1" expanded="true" />
-                    <element signature="e#1264#1298#1" expanded="true" />
-                    <element signature="e#1311#1351#1" expanded="true" />
-                    <element signature="e#1455#2285#0" expanded="true" />
-                    <element signature="e#1460#1470#1" expanded="true" />
-                    <element signature="e#1455#2285#0" expanded="true" />
-                    <element signature="e#1455#2285#0" expanded="true" />
-                    <element signature="e#1455#2285#0" expanded="true" />
-                    <element signature="e#1455#2285#0" expanded="true" />
-                    <element signature="e#1587#1601#1" expanded="true" />
-                    <element signature="e#1618#1646#1" expanded="true" />
-                    <element signature="e#1663#1877#0" expanded="true" />
-                    <element signature="e#1668#1678#1" expanded="true" />
-                    <element signature="e#1663#1877#0" expanded="true" />
-                    <element signature="e#1663#1877#0" expanded="true" />
-                    <element signature="e#1663#1877#0" expanded="true" />
-                    <element signature="e#1663#1877#0" expanded="true" />
-                    <element signature="e#1718#1859#0" expanded="true" />
-                    <element signature="e#1718#1859#0" expanded="true" />
-                    <element signature="e#1934#2270#0" expanded="true" />
-                    <element signature="e#1939#1949#1" expanded="true" />
-                    <element signature="e#1934#2270#0" expanded="true" />
-                    <element signature="e#1934#2270#0" expanded="true" />
-                    <element signature="e#1934#2270#0" expanded="true" />
-                    <element signature="e#1934#2270#0" expanded="true" />
-                    <element signature="e#1989#2252#0" expanded="true" />
-                    <element signature="e#1989#2252#0" expanded="true" />
-                    <element signature="e#2357#2605#0" expanded="true" />
-                    <element signature="e#2362#2372#1" expanded="true" />
-                    <element signature="e#2357#2605#0" expanded="true" />
-                    <element signature="e#2357#2605#0" expanded="true" />
-                    <element signature="e#2357#2605#0" expanded="true" />
-                    <element signature="e#2357#2605#0" expanded="true" />
-                    <element signature="e#2408#2591#0" expanded="true" />
-                    <element signature="e#2408#2591#0" expanded="true" />
-                    <element signature="e#2447#2573#0" expanded="true" />
-                    <element signature="e#2447#2573#0" expanded="true" />
-                    <element signature="e#2553#2571#0" expanded="true" />
-                    <element signature="e#2553#2571#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="DijkstraShortestReach2.in.txt" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/algorithms/resources/DijkstraShortestReach2.in.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="DijkstraShortestReach2.out.txt" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/algorithms/resources/DijkstraShortestReach2.out.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/algorithms/src/practices/Solution.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="396">
-                  <caret line="22" column="43" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#242#328#1" expanded="true" />
-                    <element signature="e#447#545#0" expanded="true" />
-                    <element signature="e#447#545#0" expanded="true" />
-                    <element signature="e#555#596#1" expanded="true" />
-                    <element signature="e#606#640#1" expanded="true" />
-                    <element signature="e#649#2649#0" expanded="true" />
-                    <element signature="e#649#2649#0" expanded="true" />
-                    <element signature="e#687#718#1" expanded="true" />
-                    <element signature="e#731#762#1" expanded="true" />
-                    <element signature="e#775#815#1" expanded="true" />
-                    <element signature="e#829#1169#0" expanded="true" />
-                    <element signature="e#834#844#1" expanded="true" />
-                    <element signature="e#829#1169#0" expanded="true" />
-                    <element signature="e#829#1169#0" expanded="true" />
-                    <element signature="e#829#1169#0" expanded="true" />
-                    <element signature="e#829#1169#0" expanded="true" />
-                    <element signature="e#880#910#1" expanded="true" />
-                    <element signature="e#927#957#1" expanded="true" />
-                    <element signature="e#974#1005#1" expanded="true" />
-                    <element signature="e#1023#1112#0" expanded="true" />
-                    <element signature="e#1023#1112#0" expanded="true" />
-                    <element signature="e#1182#1217#1" expanded="true" />
-                    <element signature="e#1264#1298#1" expanded="true" />
-                    <element signature="e#1311#1351#1" expanded="true" />
-                    <element signature="e#1455#2285#0" expanded="true" />
-                    <element signature="e#1460#1470#1" expanded="true" />
-                    <element signature="e#1455#2285#0" expanded="true" />
-                    <element signature="e#1455#2285#0" expanded="true" />
-                    <element signature="e#1455#2285#0" expanded="true" />
-                    <element signature="e#1455#2285#0" expanded="true" />
-                    <element signature="e#1587#1601#1" expanded="true" />
-                    <element signature="e#1618#1646#1" expanded="true" />
-                    <element signature="e#1663#1877#0" expanded="true" />
-                    <element signature="e#1668#1678#1" expanded="true" />
-                    <element signature="e#1663#1877#0" expanded="true" />
-                    <element signature="e#1663#1877#0" expanded="true" />
-                    <element signature="e#1663#1877#0" expanded="true" />
-                    <element signature="e#1663#1877#0" expanded="true" />
-                    <element signature="e#1718#1859#0" expanded="true" />
-                    <element signature="e#1718#1859#0" expanded="true" />
-                    <element signature="e#1934#2270#0" expanded="true" />
-                    <element signature="e#1939#1949#1" expanded="true" />
-                    <element signature="e#1934#2270#0" expanded="true" />
-                    <element signature="e#1934#2270#0" expanded="true" />
-                    <element signature="e#1934#2270#0" expanded="true" />
-                    <element signature="e#1934#2270#0" expanded="true" />
-                    <element signature="e#1989#2252#0" expanded="true" />
-                    <element signature="e#1989#2252#0" expanded="true" />
-                    <element signature="e#2357#2605#0" expanded="true" />
-                    <element signature="e#2362#2372#1" expanded="true" />
-                    <element signature="e#2357#2605#0" expanded="true" />
-                    <element signature="e#2357#2605#0" expanded="true" />
-                    <element signature="e#2357#2605#0" expanded="true" />
-                    <element signature="e#2357#2605#0" expanded="true" />
-                    <element signature="e#2408#2591#0" expanded="true" />
-                    <element signature="e#2408#2591#0" expanded="true" />
-                    <element signature="e#2447#2573#0" expanded="true" />
-                    <element signature="e#2447#2573#0" expanded="true" />
-                    <element signature="e#2553#2571#0" expanded="true" />
-                    <element signature="e#2553#2571#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="C_Dijkstra.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/algorithms/src/graphs/codeforces/C_Dijkstra.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="792">
+              <caret line="62" column="10" lean-forward="false" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="C_DijkstraV2.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/algorithms/src/graphs/codeforces/C_DijkstraV2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="22" column="48" lean-forward="false" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+              <folding>
+                <element signature="e#753#793#1" expanded="true" />
+                <element signature="e#976#1055#0" expanded="true" />
+                <element signature="e#976#1055#0" expanded="true" />
+                <element signature="e#1833#2124#0" expanded="true" />
+                <element signature="e#1833#2124#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/algorithms/src/practices/Solution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1044">
+              <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#647#2647#0" expanded="true" />
+                <element signature="e#647#2647#0" expanded="true" />
+                <element signature="e#827#1167#0" expanded="true" />
+                <element signature="e#832#842#1" expanded="true" />
+                <element signature="e#827#1167#0" expanded="true" />
+                <element signature="e#827#1167#0" expanded="true" />
+                <element signature="e#827#1167#0" expanded="true" />
+                <element signature="e#827#1167#0" expanded="true" />
+                <element signature="e#1021#1110#0" expanded="true" />
+                <element signature="e#1021#1110#0" expanded="true" />
+                <element signature="e#1453#2283#0" expanded="true" />
+                <element signature="e#1458#1468#1" expanded="true" />
+                <element signature="e#1453#2283#0" expanded="true" />
+                <element signature="e#1453#2283#0" expanded="true" />
+                <element signature="e#1453#2283#0" expanded="true" />
+                <element signature="e#1453#2283#0" expanded="true" />
+                <element signature="e#1585#1599#1" expanded="true" />
+                <element signature="e#1616#1644#1" expanded="true" />
+                <element signature="e#1661#1875#0" expanded="true" />
+                <element signature="e#1666#1676#1" expanded="true" />
+                <element signature="e#1661#1875#0" expanded="true" />
+                <element signature="e#1661#1875#0" expanded="true" />
+                <element signature="e#1661#1875#0" expanded="true" />
+                <element signature="e#1661#1875#0" expanded="true" />
+                <element signature="e#1716#1857#0" expanded="true" />
+                <element signature="e#1716#1857#0" expanded="true" />
+                <element signature="e#1932#2268#0" expanded="true" />
+                <element signature="e#1937#1947#1" expanded="true" />
+                <element signature="e#1932#2268#0" expanded="true" />
+                <element signature="e#1932#2268#0" expanded="true" />
+                <element signature="e#1932#2268#0" expanded="true" />
+                <element signature="e#1932#2268#0" expanded="true" />
+                <element signature="e#1987#2250#0" expanded="true" />
+                <element signature="e#1987#2250#0" expanded="true" />
+                <element signature="e#2355#2603#0" expanded="true" />
+                <element signature="e#2360#2370#1" expanded="true" />
+                <element signature="e#2355#2603#0" expanded="true" />
+                <element signature="e#2355#2603#0" expanded="true" />
+                <element signature="e#2355#2603#0" expanded="true" />
+                <element signature="e#2355#2603#0" expanded="true" />
+                <element signature="e#2406#2589#0" expanded="true" />
+                <element signature="e#2406#2589#0" expanded="true" />
+                <element signature="e#2445#2571#0" expanded="true" />
+                <element signature="e#2445#2571#0" expanded="true" />
+                <element signature="e#2551#2569#0" expanded="true" />
+                <element signature="e#2551#2569#0" expanded="true" />
+                <element signature="e#2682#2734#0" expanded="true" />
+                <element signature="e#2682#2734#0" expanded="true" />
+                <element signature="e#2744#2816#0" expanded="true" />
+                <element signature="e#2744#2816#0" expanded="true" />
+                <marker date="1557872292277" expanded="false" signature="604:607" ph="var" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="C_Dijkstra.in.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/algorithms/resources/C_Dijkstra.in.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="C_Dijkstra.out.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/algorithms/resources/C_Dijkstra.out.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -336,6 +191,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -355,9 +215,14 @@
         <option value="$PROJECT_DIR$/algorithms/resources/DfsConnectedCellInAGrid.in.txt" />
         <option value="$PROJECT_DIR$/algorithms/src/practices/Practices.java" />
         <option value="$PROJECT_DIR$/algorithms/src/graphs/DfsBfs.java" />
-        <option value="$PROJECT_DIR$/algorithms/src/practices/Solution.java" />
-        <option value="$PROJECT_DIR$/algorithms/resources/DijkstraShortestReach2.out.txt" />
         <option value="$PROJECT_DIR$/algorithms/src/graphs/hackerrank/DijkstraShortestReach2.java" />
+        <option value="$PROJECT_DIR$/algorithms/resources/DijkstraShortestReach2.in.txt" />
+        <option value="$PROJECT_DIR$/algorithms/resources/DijkstraShortestReach2.out.txt" />
+        <option value="$PROJECT_DIR$/algorithms/resources/C_Dijkstra.out.txt" />
+        <option value="$PROJECT_DIR$/algorithms/resources/C_Dijkstra.in.txt" />
+        <option value="$PROJECT_DIR$/algorithms/src/graphs/codeforces/C_Dijkstra.java" />
+        <option value="$PROJECT_DIR$/algorithms/src/practices/Solution.java" />
+        <option value="$PROJECT_DIR$/algorithms/src/graphs/codeforces/C_DijkstraV2.java" />
       </list>
     </option>
   </component>
@@ -391,8 +256,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -434,6 +300,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="practices" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -485,9 +355,52 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stepover" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stepover" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graphs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codeforces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stepover" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stepover" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -495,7 +408,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556429218088" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/algorithms/src" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/algorithms/src/practices/Solution.java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/algorithms/src/graphs/codeforces/C_Dijkstra.java" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -505,9 +418,12 @@
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v10.4.0/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="$USER_HOME$/.nvm/versions/node/v10.4.0/bin/node" />
-    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/algorithms/src/practices/Solution.java" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/algorithms/src/graphs/codeforces/C_Dijkstra.java" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="graphs.codeforces" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/algorithms/resources/practices" />
     </key>
@@ -524,27 +440,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Solution">
-    <configuration default="false" name="DfsConnectedCellInAGrid" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="graphs.hackerrank.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="graphs.hackerrank.DfsConnectedCellInAGrid" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="stepover" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.C_Dijkstra">
     <configuration default="false" name="Practices" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" runner="idea">
         <pattern>
@@ -613,6 +509,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="practices.Solution" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="stepover" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="C_Dijkstra" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="graphs.codeforces.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="graphs.codeforces.C_Dijkstra" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
@@ -847,6 +763,7 @@
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
       <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -994,6 +911,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -1027,19 +950,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.DfsConnectedCellInAGrid" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Practices" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Practices2" />
-      <item index="3" class="java.lang.String" itemvalue="Application.DijkstraShortestReach2" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Solution" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Practices" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Practices2" />
+      <item index="2" class="java.lang.String" itemvalue="Application.DijkstraShortestReach2" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Solution" />
+      <item index="4" class="java.lang.String" itemvalue="Application.C_Dijkstra" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Solution" />
-        <item index="1" class="java.lang.String" itemvalue="Application.DijkstraShortestReach2" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Practices2" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Practices" />
-        <item index="4" class="java.lang.String" itemvalue="Application.DfsConnectedCellInAGrid" />
+        <item index="0" class="java.lang.String" itemvalue="Application.C_Dijkstra" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Solution" />
+        <item index="2" class="java.lang.String" itemvalue="Application.DijkstraShortestReach2" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Practices2" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Practices" />
       </list>
     </recent_temporary>
   </component>
@@ -1069,12 +992,14 @@
       <workItem from="1556382978039" duration="10095000" />
       <workItem from="1556425874156" duration="2992000" />
       <workItem from="1556430441744" duration="391000" />
-      <workItem from="1556921670736" duration="17642000" />
+      <workItem from="1556921670736" duration="24010000" />
+      <workItem from="1557069778842" duration="11956000" />
+      <workItem from="1557872037984" duration="419000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42552000" />
+    <option name="totallyTimeSpent" value="61295000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1098,58 +1023,27 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952693" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2490484" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25176728" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952693" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2490484" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -1168,17 +1062,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/algorithms/src/graphs/hackerrank/DijkstraShortestReach2.java</url>
-          <line>42</line>
+          <line>44</line>
           <properties />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/algorithms/src/graphs/hackerrank/DijkstraShortestReach2.java</url>
-          <line>69</line>
+          <line>71</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1187,13 +1081,154 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/algorithms/src/graphs/codeforces/C_Dijkstra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1116">
+          <caret line="62" column="10" lean-forward="false" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/src/graphs/codeforces/C_DijkstraV2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#753#793#1" expanded="true" />
+            <element signature="e#976#1055#0" expanded="true" />
+            <element signature="e#976#1055#0" expanded="true" />
+            <element signature="e#1833#2124#0" expanded="true" />
+            <element signature="e#1833#2124#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/resources/C_Dijkstra.in.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/resources/C_Dijkstra.out.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/src/practices/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1134">
+          <caret line="64" column="46" lean-forward="false" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#647#2647#0" expanded="true" />
+            <element signature="e#647#2647#0" expanded="true" />
+            <element signature="e#827#1167#0" expanded="true" />
+            <element signature="e#832#842#1" expanded="true" />
+            <element signature="e#827#1167#0" expanded="true" />
+            <element signature="e#827#1167#0" expanded="true" />
+            <element signature="e#827#1167#0" expanded="true" />
+            <element signature="e#827#1167#0" expanded="true" />
+            <element signature="e#1021#1110#0" expanded="true" />
+            <element signature="e#1021#1110#0" expanded="true" />
+            <element signature="e#1453#2283#0" expanded="true" />
+            <element signature="e#1458#1468#1" expanded="true" />
+            <element signature="e#1453#2283#0" expanded="true" />
+            <element signature="e#1453#2283#0" expanded="true" />
+            <element signature="e#1453#2283#0" expanded="true" />
+            <element signature="e#1453#2283#0" expanded="true" />
+            <element signature="e#1585#1599#1" expanded="true" />
+            <element signature="e#1616#1644#1" expanded="true" />
+            <element signature="e#1661#1875#0" expanded="true" />
+            <element signature="e#1666#1676#1" expanded="true" />
+            <element signature="e#1661#1875#0" expanded="true" />
+            <element signature="e#1661#1875#0" expanded="true" />
+            <element signature="e#1661#1875#0" expanded="true" />
+            <element signature="e#1661#1875#0" expanded="true" />
+            <element signature="e#1716#1857#0" expanded="true" />
+            <element signature="e#1716#1857#0" expanded="true" />
+            <element signature="e#1932#2268#0" expanded="true" />
+            <element signature="e#1937#1947#1" expanded="true" />
+            <element signature="e#1932#2268#0" expanded="true" />
+            <element signature="e#1932#2268#0" expanded="true" />
+            <element signature="e#1932#2268#0" expanded="true" />
+            <element signature="e#1932#2268#0" expanded="true" />
+            <element signature="e#1987#2250#0" expanded="true" />
+            <element signature="e#1987#2250#0" expanded="true" />
+            <element signature="e#2355#2603#0" expanded="true" />
+            <element signature="e#2360#2370#1" expanded="true" />
+            <element signature="e#2355#2603#0" expanded="true" />
+            <element signature="e#2355#2603#0" expanded="true" />
+            <element signature="e#2355#2603#0" expanded="true" />
+            <element signature="e#2355#2603#0" expanded="true" />
+            <element signature="e#2406#2589#0" expanded="true" />
+            <element signature="e#2406#2589#0" expanded="true" />
+            <element signature="e#2445#2571#0" expanded="true" />
+            <element signature="e#2445#2571#0" expanded="true" />
+            <element signature="e#2551#2569#0" expanded="true" />
+            <element signature="e#2551#2569#0" expanded="true" />
+            <element signature="e#2682#2734#0" expanded="true" />
+            <element signature="e#2682#2734#0" expanded="true" />
+            <element signature="e#2744#2816#0" expanded="true" />
+            <element signature="e#2744#2816#0" expanded="true" />
+            <marker date="1557872292277" expanded="false" signature="604:607" ph="var" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/src/graphs/codeforces/C_Dijkstra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/resources/C_Dijkstra.out.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/resources/DijkstraShortestReach2.in.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="25" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/resources/DijkstraShortestReach2.out.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/resources/C_Dijkstra.in.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/src/practices/Practices.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1259#2127#0" expanded="true" />
-            <element signature="e#1259#2127#0" expanded="true" />
+            <element signature="e#1259#2127#0" expanded="false" />
+            <element signature="e#1259#2127#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1268,9 +1303,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5274">
           <caret line="91" column="37" lean-forward="true" selection-start-line="91" selection-start-column="37" selection-end-line="91" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#20159#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1278,7 +1310,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="57" column="22" lean-forward="false" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1286,7 +1317,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
           <caret line="85" column="17" lean-forward="false" selection-start-line="85" selection-start-column="17" selection-end-line="85" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1294,7 +1324,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="107" column="40" lean-forward="false" selection-start-line="107" selection-start-column="40" selection-end-line="107" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1302,7 +1331,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="84" column="17" lean-forward="false" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1310,10 +1338,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#1130#1143#0" expanded="true" />
-            <element signature="e#1130#1143#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1321,15 +1345,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="684">
           <caret line="38" column="55" lean-forward="true" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1308#1643#0" expanded="true" />
-            <element signature="e#1313#1325#1" expanded="true" />
-            <element signature="e#1308#1643#0" expanded="true" />
-            <element signature="e#1308#1643#0" expanded="true" />
-            <element signature="e#1308#1643#0" expanded="true" />
-            <element signature="e#1308#1643#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1338,8 +1353,8 @@
         <state relative-caret-position="873">
           <caret line="50" column="47" lean-forward="false" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
           <folding>
-            <element signature="e#1784#1823#0" expanded="true" />
-            <element signature="e#1784#1823#0" expanded="true" />
+            <element signature="e#1784#1823#0" expanded="false" />
+            <element signature="e#1784#1823#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1349,172 +1364,141 @@
         <state relative-caret-position="693">
           <caret line="61" column="52" lean-forward="false" selection-start-line="60" selection-start-column="8" selection-end-line="61" selection-end-column="81" />
           <folding>
-            <element signature="e#1259#2127#0" expanded="true" />
-            <element signature="e#1259#2127#0" expanded="true" />
+            <element signature="e#1259#2127#0" expanded="false" />
+            <element signature="e#1259#2127#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/src/graphs/hackerrank/DijkstraShortestReach2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        <state relative-caret-position="387">
+          <caret line="78" column="81" lean-forward="true" selection-start-line="76" selection-start-column="8" selection-end-line="78" selection-end-column="81" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#346#432#1" expanded="true" />
-            <element signature="e#366#431#0" expanded="true" />
-            <element signature="e#366#431#0" expanded="true" />
-            <element signature="e#441#541#0" expanded="true" />
-            <element signature="e#483#538#0" expanded="true" />
-            <element signature="e#483#538#0" expanded="true" />
-            <element signature="e#441#541#0" expanded="true" />
-            <element signature="e#551#649#0" expanded="true" />
-            <element signature="e#590#646#0" expanded="true" />
-            <element signature="e#590#646#0" expanded="true" />
-            <element signature="e#551#649#0" expanded="true" />
-            <element signature="e#659#700#1" expanded="true" />
-            <element signature="e#710#744#1" expanded="true" />
-            <element signature="e#753#2731#0" expanded="true" />
-            <element signature="e#753#2731#0" expanded="true" />
-            <element signature="e#791#822#1" expanded="true" />
-            <element signature="e#835#866#1" expanded="true" />
-            <element signature="e#879#919#1" expanded="true" />
-            <element signature="e#933#1273#0" expanded="true" />
-            <element signature="e#938#948#1" expanded="true" />
-            <element signature="e#933#1273#0" expanded="true" />
-            <element signature="e#933#1273#0" expanded="true" />
-            <element signature="e#933#1273#0" expanded="true" />
-            <element signature="e#933#1273#0" expanded="true" />
-            <element signature="e#984#1014#1" expanded="true" />
-            <element signature="e#1031#1061#1" expanded="true" />
-            <element signature="e#1078#1109#1" expanded="true" />
-            <element signature="e#1127#1216#0" expanded="true" />
-            <element signature="e#1127#1216#0" expanded="true" />
-            <element signature="e#1286#1321#1" expanded="true" />
-            <element signature="e#1368#1408#1" expanded="true" />
-            <element signature="e#1421#1455#1" expanded="true" />
-            <element signature="e#1559#2384#0" expanded="true" />
-            <element signature="e#1564#1574#1" expanded="true" />
-            <element signature="e#1559#2384#0" expanded="true" />
-            <element signature="e#1559#2384#0" expanded="true" />
-            <element signature="e#1559#2384#0" expanded="true" />
-            <element signature="e#1559#2384#0" expanded="true" />
-            <element signature="e#1689#1703#1" expanded="true" />
-            <element signature="e#1720#1748#1" expanded="true" />
-            <element signature="e#1765#1979#0" expanded="true" />
-            <element signature="e#1770#1780#1" expanded="true" />
-            <element signature="e#1765#1979#0" expanded="true" />
-            <element signature="e#1765#1979#0" expanded="true" />
-            <element signature="e#1765#1979#0" expanded="true" />
-            <element signature="e#1765#1979#0" expanded="true" />
-            <element signature="e#1820#1961#0" expanded="true" />
-            <element signature="e#1820#1961#0" expanded="true" />
-            <element signature="e#2036#2370#0" expanded="true" />
-            <element signature="e#2041#2051#1" expanded="true" />
-            <element signature="e#2036#2370#0" expanded="true" />
-            <element signature="e#2036#2370#0" expanded="true" />
-            <element signature="e#2036#2370#0" expanded="true" />
-            <element signature="e#2036#2370#0" expanded="true" />
-            <element signature="e#2091#2352#0" expanded="true" />
-            <element signature="e#2091#2352#0" expanded="true" />
-            <element signature="e#2439#2687#0" expanded="true" />
-            <element signature="e#2444#2454#1" expanded="true" />
-            <element signature="e#2439#2687#0" expanded="true" />
-            <element signature="e#2439#2687#0" expanded="true" />
-            <element signature="e#2439#2687#0" expanded="true" />
-            <element signature="e#2439#2687#0" expanded="true" />
-            <element signature="e#2490#2673#0" expanded="true" />
-            <element signature="e#2490#2673#0" expanded="true" />
-            <element signature="e#2529#2655#0" expanded="true" />
-            <element signature="e#2529#2655#0" expanded="true" />
-            <element signature="e#2635#2653#0" expanded="true" />
-            <element signature="e#2635#2653#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#432#518#1" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/resources/DijkstraShortestReach2.in.txt">
+    <entry file="jar:///usr/lib/jdk/jdk1.8.0_131/src.zip!/java/lang/Integer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="300">
+          <caret line="56" column="38" lean-forward="false" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/resources/DijkstraShortestReach2.out.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="54">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/resources/DijkstraShortestReach2.in.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="25" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/resources/C_Dijkstra.in.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/resources/C_Dijkstra.out.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/src/graphs/codeforces/C_Dijkstra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="62" column="10" lean-forward="false" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/src/practices/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="43" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+        <state relative-caret-position="1044">
+          <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#242#328#1" expanded="true" />
-            <element signature="e#447#545#0" expanded="true" />
-            <element signature="e#447#545#0" expanded="true" />
-            <element signature="e#555#596#1" expanded="true" />
-            <element signature="e#606#640#1" expanded="true" />
-            <element signature="e#649#2649#0" expanded="true" />
-            <element signature="e#649#2649#0" expanded="true" />
-            <element signature="e#687#718#1" expanded="true" />
-            <element signature="e#731#762#1" expanded="true" />
-            <element signature="e#775#815#1" expanded="true" />
-            <element signature="e#829#1169#0" expanded="true" />
-            <element signature="e#834#844#1" expanded="true" />
-            <element signature="e#829#1169#0" expanded="true" />
-            <element signature="e#829#1169#0" expanded="true" />
-            <element signature="e#829#1169#0" expanded="true" />
-            <element signature="e#829#1169#0" expanded="true" />
-            <element signature="e#880#910#1" expanded="true" />
-            <element signature="e#927#957#1" expanded="true" />
-            <element signature="e#974#1005#1" expanded="true" />
-            <element signature="e#1023#1112#0" expanded="true" />
-            <element signature="e#1023#1112#0" expanded="true" />
-            <element signature="e#1182#1217#1" expanded="true" />
-            <element signature="e#1264#1298#1" expanded="true" />
-            <element signature="e#1311#1351#1" expanded="true" />
-            <element signature="e#1455#2285#0" expanded="true" />
-            <element signature="e#1460#1470#1" expanded="true" />
-            <element signature="e#1455#2285#0" expanded="true" />
-            <element signature="e#1455#2285#0" expanded="true" />
-            <element signature="e#1455#2285#0" expanded="true" />
-            <element signature="e#1455#2285#0" expanded="true" />
-            <element signature="e#1587#1601#1" expanded="true" />
-            <element signature="e#1618#1646#1" expanded="true" />
-            <element signature="e#1663#1877#0" expanded="true" />
-            <element signature="e#1668#1678#1" expanded="true" />
-            <element signature="e#1663#1877#0" expanded="true" />
-            <element signature="e#1663#1877#0" expanded="true" />
-            <element signature="e#1663#1877#0" expanded="true" />
-            <element signature="e#1663#1877#0" expanded="true" />
-            <element signature="e#1718#1859#0" expanded="true" />
-            <element signature="e#1718#1859#0" expanded="true" />
-            <element signature="e#1934#2270#0" expanded="true" />
-            <element signature="e#1939#1949#1" expanded="true" />
-            <element signature="e#1934#2270#0" expanded="true" />
-            <element signature="e#1934#2270#0" expanded="true" />
-            <element signature="e#1934#2270#0" expanded="true" />
-            <element signature="e#1934#2270#0" expanded="true" />
-            <element signature="e#1989#2252#0" expanded="true" />
-            <element signature="e#1989#2252#0" expanded="true" />
-            <element signature="e#2357#2605#0" expanded="true" />
-            <element signature="e#2362#2372#1" expanded="true" />
-            <element signature="e#2357#2605#0" expanded="true" />
-            <element signature="e#2357#2605#0" expanded="true" />
-            <element signature="e#2357#2605#0" expanded="true" />
-            <element signature="e#2357#2605#0" expanded="true" />
-            <element signature="e#2408#2591#0" expanded="true" />
-            <element signature="e#2408#2591#0" expanded="true" />
-            <element signature="e#2447#2573#0" expanded="true" />
-            <element signature="e#2447#2573#0" expanded="true" />
-            <element signature="e#2553#2571#0" expanded="true" />
-            <element signature="e#2553#2571#0" expanded="true" />
+            <element signature="e#647#2647#0" expanded="true" />
+            <element signature="e#647#2647#0" expanded="true" />
+            <element signature="e#827#1167#0" expanded="true" />
+            <element signature="e#832#842#1" expanded="true" />
+            <element signature="e#827#1167#0" expanded="true" />
+            <element signature="e#827#1167#0" expanded="true" />
+            <element signature="e#827#1167#0" expanded="true" />
+            <element signature="e#827#1167#0" expanded="true" />
+            <element signature="e#1021#1110#0" expanded="true" />
+            <element signature="e#1021#1110#0" expanded="true" />
+            <element signature="e#1453#2283#0" expanded="true" />
+            <element signature="e#1458#1468#1" expanded="true" />
+            <element signature="e#1453#2283#0" expanded="true" />
+            <element signature="e#1453#2283#0" expanded="true" />
+            <element signature="e#1453#2283#0" expanded="true" />
+            <element signature="e#1453#2283#0" expanded="true" />
+            <element signature="e#1585#1599#1" expanded="true" />
+            <element signature="e#1616#1644#1" expanded="true" />
+            <element signature="e#1661#1875#0" expanded="true" />
+            <element signature="e#1666#1676#1" expanded="true" />
+            <element signature="e#1661#1875#0" expanded="true" />
+            <element signature="e#1661#1875#0" expanded="true" />
+            <element signature="e#1661#1875#0" expanded="true" />
+            <element signature="e#1661#1875#0" expanded="true" />
+            <element signature="e#1716#1857#0" expanded="true" />
+            <element signature="e#1716#1857#0" expanded="true" />
+            <element signature="e#1932#2268#0" expanded="true" />
+            <element signature="e#1937#1947#1" expanded="true" />
+            <element signature="e#1932#2268#0" expanded="true" />
+            <element signature="e#1932#2268#0" expanded="true" />
+            <element signature="e#1932#2268#0" expanded="true" />
+            <element signature="e#1932#2268#0" expanded="true" />
+            <element signature="e#1987#2250#0" expanded="true" />
+            <element signature="e#1987#2250#0" expanded="true" />
+            <element signature="e#2355#2603#0" expanded="true" />
+            <element signature="e#2360#2370#1" expanded="true" />
+            <element signature="e#2355#2603#0" expanded="true" />
+            <element signature="e#2355#2603#0" expanded="true" />
+            <element signature="e#2355#2603#0" expanded="true" />
+            <element signature="e#2355#2603#0" expanded="true" />
+            <element signature="e#2406#2589#0" expanded="true" />
+            <element signature="e#2406#2589#0" expanded="true" />
+            <element signature="e#2445#2571#0" expanded="true" />
+            <element signature="e#2445#2571#0" expanded="true" />
+            <element signature="e#2551#2569#0" expanded="true" />
+            <element signature="e#2551#2569#0" expanded="true" />
+            <element signature="e#2682#2734#0" expanded="true" />
+            <element signature="e#2682#2734#0" expanded="true" />
+            <element signature="e#2744#2816#0" expanded="true" />
+            <element signature="e#2744#2816#0" expanded="true" />
+            <marker date="1557872292277" expanded="false" signature="604:607" ph="var" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/src/graphs/codeforces/C_DijkstraV2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="22" column="48" lean-forward="false" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+          <folding>
+            <element signature="e#753#793#1" expanded="true" />
+            <element signature="e#976#1055#0" expanded="true" />
+            <element signature="e#976#1055#0" expanded="true" />
+            <element signature="e#1833#2124#0" expanded="true" />
+            <element signature="e#1833#2124#0" expanded="true" />
           </folding>
         </state>
       </provider>
