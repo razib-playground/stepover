@@ -7,6 +7,8 @@ import java.util.*;
  * Created by fakrul on 5/4/19.
  * Dijkstra with array/adjacency matrix
  * This approch got time limit exception.
+ *
+ * Link:https://www.hackerrank.com/challenges/dijkstrashortreach/problem?h_r=profile
  */
 
 @SuppressWarnings("Duplicates")
