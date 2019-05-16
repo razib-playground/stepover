@@ -2,15 +2,26 @@ package graphs;
 
 /*Dijkstra using Edge, Map*/
 
+import java.io.*;
 import java.util.Objects;
+import java.util.Scanner;
 
-public class DijkstraV2{
+public class DijkstraV2 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
+
+        String projectDir = System.getProperty("user.home") + "/projects/algorithms";
+        System.setIn(new FileInputStream(new File(projectDir + "/resources/Dijkstra.in.txt")));
+        System.setOut(new PrintStream(new File(projectDir + "resources/Dijkstra.out.txt")));
+        Scanner scanner = new Scanner(System.in);
+
+        System.setIn(new FileInputStream(FileDescriptor.out));
+        System.setOut(new PrintStream(new FileOutputStream(FileDescriptor.out)));
+        scanner.close();
 
     }
 
-    private static class Edge{
+    private static class Edge {
 
         int u;
         int v;
