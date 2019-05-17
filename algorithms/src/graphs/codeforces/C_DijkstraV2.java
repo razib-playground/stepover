@@ -17,7 +17,7 @@ public class C_DijkstraV2 {
 
         int nNodes = scanner.nextInt();
         int nEdges = scanner.nextInt();
-        parents = new int[nNodes + 1];
+        parents = new int[nNodes];
 
         List<HashSet<Node>> adjacencyList = new ArrayList<>();
         for (int i = 0; i < nNodes; i++) adjacencyList.add(new HashSet<>());
@@ -32,10 +32,10 @@ public class C_DijkstraV2 {
         }
 
         //dijkstra start
-        int[] distances = new int[nNodes];
+        long[] distances = new long[nNodes];
         boolean[] visited = new boolean[nNodes];
 
-        Arrays.fill(distances, Integer.MAX_VALUE);
+        Arrays.fill(distances, Long.MAX_VALUE);
         Arrays.fill(parents, -1);
         parents[0] = -1;
         distances[0] = -1;
@@ -48,10 +48,10 @@ public class C_DijkstraV2 {
             if (!visited[u.value]) {
                 Set<Node> neighbours = adjacencyList.get(u.value);
                 for (Node v : neighbours) {
-                    int relaxedDistance = distances[u.value] + v.cost;
+                    long relaxedDistance = distances[u.value] + v.cost;
                     if (distances[v.value] > relaxedDistance) {
                         distances[v.value] = relaxedDistance;
-                        parents[v.value + 1] = u.value + 1;
+                        parents[v.value] = u.value;
                         queue.add(new Node(v.value, relaxedDistance));
                     }
                 }
@@ -60,10 +60,10 @@ public class C_DijkstraV2 {
         }
         //dijkstra end
 
-        System.out.println(Arrays.toString(parents));
-        if (parents[nNodes] == -1) System.out.println("-1 ");
+        if (parents[nNodes-1] == -1) System.out.println("-1 ");
         else {
-            printPath(nNodes);
+            System.out.print("1 ");
+            printPath(nNodes-1);
         }
         System.out.println();
 
@@ -74,19 +74,17 @@ public class C_DijkstraV2 {
     }
 
     private static void printPath(int index) {
-        if (parents[index] == -1) {
-            System.out.print(index);
-            return;
+        if (parents[index]!=-1) {
+            printPath(parents[index]);
+            System.out.print((index+1) +" ");
         }
-        printPath(parents[index]);
-        System.out.print(" " + (index));
     }
 
     private static class Node implements Comparable<Node> {
         int value;
-        int cost;
+        long cost;
 
-        public Node(int value, int cost) {
+        public Node(int value, long cost) {
             this.value = value;
             this.cost = cost;
         }
@@ -107,7 +105,7 @@ public class C_DijkstraV2 {
 
         @Override
         public int compareTo(Node n) {
-            return Integer.compare(this.cost, n.cost);
+            return Long.compare(this.cost, n.cost);
         }
     }
 }
