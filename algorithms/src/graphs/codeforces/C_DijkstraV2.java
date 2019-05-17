@@ -6,7 +6,7 @@ import java.util.*;
 @SuppressWarnings("Duplicates")
 public class C_DijkstraV2 {
 
-    public static int[] parents;
+    public static int[] parents = {-1, -1, 1, 4, 1, 5};
 
     public static void main(String[] args) throws FileNotFoundException {
 
@@ -60,7 +60,7 @@ public class C_DijkstraV2 {
         }
         //dijkstra end
 
-        System.out.print(Arrays.toString(parents));
+        System.out.println(Arrays.toString(parents));
         if (parents[nNodes] == -1) System.out.println("-1 ");
         else {
             printPath(nNodes);
