@@ -1,6 +1,8 @@
 package graphs;
 
-/*Dijkstra using Edge, Map*/
+/*Dijkstra using adjacency list of Node and Priority queue*/
+
+import com.sun.javafx.geom.Edge;
 
 import java.io.*;
 import java.util.*;
@@ -20,44 +22,46 @@ public class DijkstraV2 {
             int nNodes = scanner.nextInt();
             int nEdges = scanner.nextInt();
 
-            Map<Integer, Set<Edge>> graph = new HashMap<>();
+            List<Set<Node>> adjacencyList = new ArrayList<>();
+            for (int i = 0; i < nNodes; i++) adjacencyList.add(new HashSet<Node>());
+
             for (int i = 0; i < nEdges; i++) {
-                int u = scanner.nextInt();
-                int v = scanner.nextInt();
+                int u = scanner.nextInt() - 1;
+                int v = scanner.nextInt() - 1;
                 int w = scanner.nextInt();
 
-                if (!graph.containsKey(u)) graph.put(u, new HashSet<>());
-                if (!graph.containsKey(v)) graph.put(v, new HashSet<>());
-
-                graph.get(u).add(new Edge(u, v, w));
-                graph.get(v).add(new Edge(v, u, w));
-
+                adjacencyList.get(u).add(new Node(v, w));
+                adjacencyList.get(v).add(new Node(u, w));
             }
-            int source = scanner.nextInt();
+            int source = scanner.nextInt() - 1;
 
-            PriorityQueue<Edge> queue = new PriorityQueue<>(new Comparator<Edge>() {
-                @Override
-                public int compare(Edge e1, Edge e2) {
-                    return (e1.w - e2.w);
-                }
-            });
-            boolean[] visited = new boolean[nNodes + 1];
-            int[] distances = new int[nNodes + 1];
+            //dijkstra start
+            int[] distances = new int[nNodes];
             Arrays.fill(distances, Integer.MAX_VALUE);
-            queue.addAll(graph.get(source));
-            visited[source] = true;
-            while (!queue.isEmpty()) {
-                Edge minEdge = queue.poll();
+            distances[source] = 0;
+            PriorityQueue<Node> priorityQueue = new PriorityQueue<>();
 
-                for (Edge otherEdge : graph.get(minEdge.v)) {
-                    if(!visited[otherEdge.u]) {
-                        queue.add(otherEdge);
+            priorityQueue.add(new Node(source, 0));
+            while (!priorityQueue.isEmpty()) {
+                Node u = priorityQueue.poll();
+
+                Set<Node> neighbours = adjacencyList.get(u.value);
+                for (Node v : neighbours) {
+                    int relaxedDistance = distances[u.value] + v.cost;
+                    if (distances[v.value] > relaxedDistance) {
+                        distances[v.value]  = relaxedDistance;
+                        priorityQueue.add(new Node(v.value, relaxedDistance));
                     }
                 }
-                visited[minEdge.v] = true;
-
             }
+            //dijkstra end
 
+            for (int i = 0; i < nNodes; i++) {
+                if (i != source) {
+                    System.out.print(( (distances[i]==Integer.MAX_VALUE)? -1 : distances[i]) +" ");
+                }
+            }
+            System.out.println();
         }
 
         System.setIn(new FileInputStream(FileDescriptor.out));
@@ -67,31 +71,33 @@ public class DijkstraV2 {
     }
 
 
-    private static class Edge {
+    private static class Node implements Comparable<Node> {
 
-        int u;
-        int v;
-        int w;
+        int value;
+        int cost;
 
-        public Edge(int u, int v, int w) {
-            this.u = u;
-            this.v = v;
-            this.w = w;
+        public Node(int value, int cost) {
+            this.value = value;
+            this.cost = cost;
         }
 
         @Override
         public boolean equals(Object o) {
             if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
-            Edge edge = (Edge) o;
-            return u == edge.u &&
-                    v == edge.v &&
-                    w == edge.w;
+            Node node = (Node) o;
+            return value == node.value &&
+                    cost == node.cost;
         }
 
         @Override
         public int hashCode() {
-            return Objects.hash(u, v, w);
+            return Objects.hash(value, cost);
+        }
+
+        @Override
+        public int compareTo(Node node) {
+            return Integer.compare(this.cost, node.cost);
         }
     }
 }

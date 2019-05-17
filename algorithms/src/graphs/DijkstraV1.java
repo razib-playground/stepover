@@ -1,6 +1,12 @@
 package graphs;
 
-/*Implementation of Dijkstra shortest path algorithm using 2d matrix and array*/
+/*Implementation of Dijkstra shortest path algorithm using 2d matrix and array
+* Complexity:
+*   time:
+*   space:
+*
+*  Tutorial Link:
+* */
 
 import java.io.*;
 import java.util.*;
