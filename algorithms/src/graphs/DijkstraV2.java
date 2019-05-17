@@ -1,8 +1,10 @@
 package graphs;
 
-/*Dijkstra using adjacency list of Node and Priority queue*/
-
-import com.sun.javafx.geom.Edge;
+/*Dijkstra using adjacency list of Node and Priority queue
+* Complexity:
+*   Time:
+*   Space:
+* */
 
 import java.io.*;
 import java.util.*;
@@ -23,7 +25,7 @@ public class DijkstraV2 {
             int nEdges = scanner.nextInt();
 
             List<Set<Node>> adjacencyList = new ArrayList<>();
-            for (int i = 0; i < nNodes; i++) adjacencyList.add(new HashSet<Node>());
+            for (int i = 0; i < nNodes; i++) adjacencyList.add(new HashSet<>());
 
             for (int i = 0; i < nEdges; i++) {
                 int u = scanner.nextInt() - 1;
@@ -37,6 +39,9 @@ public class DijkstraV2 {
 
             //dijkstra start
             int[] distances = new int[nNodes];
+            boolean[] visited = new boolean[nNodes];
+            int[] parents = new int[nNodes];
+            parents[source] = -1;
             Arrays.fill(distances, Integer.MAX_VALUE);
             distances[source] = 0;
             PriorityQueue<Node> priorityQueue = new PriorityQueue<>();
@@ -45,14 +50,20 @@ public class DijkstraV2 {
             while (!priorityQueue.isEmpty()) {
                 Node u = priorityQueue.poll();
 
-                Set<Node> neighbours = adjacencyList.get(u.value);
-                for (Node v : neighbours) {
-                    int relaxedDistance = distances[u.value] + v.cost;
-                    if (distances[v.value] > relaxedDistance) {
-                        distances[v.value]  = relaxedDistance;
-                        priorityQueue.add(new Node(v.value, relaxedDistance));
+                if (!visited[u.value]) {
+                    visited[u.value] = true;
+
+                    Set<Node> neighbours = adjacencyList.get(u.value);
+                    for (Node v : neighbours) {
+                        int relaxedDistance = distances[u.value] + v.cost;
+                        if (distances[v.value] > relaxedDistance) {
+                            distances[v.value]  = relaxedDistance;
+                            priorityQueue.add(new Node(v.value, relaxedDistance));
+                            parents[v.value] = u.value;
+                        }
                     }
                 }
+
             }
             //dijkstra end
 
@@ -62,6 +73,9 @@ public class DijkstraV2 {
                 }
             }
             System.out.println();
+
+            printPath(parents, nNodes-1);
+            System.out.println("\n.........x.........x.........x.........x.........x.........\n");
         }
 
         System.setIn(new FileInputStream(FileDescriptor.out));
@@ -70,13 +84,18 @@ public class DijkstraV2 {
 
     }
 
+    private static void printPath(int[] parents, int index) {
+        if (parents[index] == -1) return;
+        printPath(parents, parents[index]);
+        System.out.print(parents[index] + 1 +" ");
+    }
 
     private static class Node implements Comparable<Node> {
 
         int value;
         int cost;
 
-        public Node(int value, int cost) {
+        Node(int value, int cost) {
             this.value = value;
             this.cost = cost;
         }
