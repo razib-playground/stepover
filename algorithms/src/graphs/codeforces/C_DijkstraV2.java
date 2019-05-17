@@ -6,7 +6,7 @@ import java.util.*;
 @SuppressWarnings("Duplicates")
 public class C_DijkstraV2 {
 
-    public static int[] parents = {-1, -1, 1, 4, 1, 5};
+    public static int[] parents;
 
     public static void main(String[] args) throws FileNotFoundException {
 

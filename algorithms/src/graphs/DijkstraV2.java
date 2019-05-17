@@ -9,6 +9,7 @@ package graphs;
 import java.io.*;
 import java.util.*;
 
+@SuppressWarnings("Duplicates")
 public class DijkstraV2 {
 
     public static void main(String[] args) throws FileNotFoundException {
