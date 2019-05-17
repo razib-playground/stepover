@@ -37,7 +37,6 @@ public class C_Dijkstra {
         boolean[] visited = new boolean[nNodes];
         Arrays.fill(distances, Integer.MAX_VALUE);
         Arrays.fill(parents, -1);
-        boolean found = false;
 
         distances[0] = 0;
         for (int i = 0; i < nNodes - 1; i++) {

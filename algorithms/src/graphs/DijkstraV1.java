@@ -52,7 +52,7 @@ public class DijkstraV1 {
                     }
                 }
 
-                //relaxation: updating the connected unvisited node distances based on the new min dastances
+                //relaxation: updating the connected(reachable) unvisited node distances based on the new min distance
                 visited[index] = true;
                 for (int j = 0; j < nNodes; j++) {
                     if (!visited[j] && costs[index][j] != 0 && distances[index] != Integer.MAX_VALUE
