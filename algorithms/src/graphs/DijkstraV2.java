@@ -52,8 +52,6 @@ public class DijkstraV2 {
                 Node u = priorityQueue.poll();
 
                 if (!visited[u.value]) {
-                    visited[u.value] = true;
-
                     Set<Node> neighbours = adjacencyList.get(u.value);
                     for (Node v : neighbours) {
                         int relaxedDistance = distances[u.value] + v.cost;
@@ -63,6 +61,7 @@ public class DijkstraV2 {
                             parents[v.value] = u.value;
                         }
                     }
+                    visited[u.value] = true;
                 }
 
             }

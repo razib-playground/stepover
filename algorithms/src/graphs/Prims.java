@@ -58,6 +58,7 @@ public class Prims {
 
                 if (visited[minEdge.u] && visited[minEdge.v]) continue;
                 visited[minEdge.u] = true;
+
                 for (Edge otherEdge : graph.get(minEdge.v)) {
                     if (!visited[otherEdge.v]) {
                         queue.add(otherEdge);
