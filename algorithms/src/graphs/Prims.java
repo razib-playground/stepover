@@ -31,8 +31,8 @@ public class Prims {
 
                 graph.get(u).add(new Edge(u, v, w));
                 graph.get(v).add(new Edge(v, u, w));
-                /* Important: its required to add the edge in alternative order of nodes like this
-                 * Reason: debug the code specially with the first test case and find it
+                /* Important: its required to add the edge in alternative order of nodes like above
+                 * Reason: debug the code specially with the first test case and find it :)
                  */
             }
             int source = scanner.nextInt();
