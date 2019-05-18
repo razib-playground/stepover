@@ -50,7 +50,7 @@ public class Prims {
 
             queue.addAll(graph.get(source));
             visited[source] = true;
-            /*The above line is imiportant if you want to skip loop at source.
+            /*The above line is important if you want to skip loop at source.
             * Otherwise loop at source are not skipped. See the last test case.
             * The source is mark visited twice*/
             while (!queue.isEmpty()) {
