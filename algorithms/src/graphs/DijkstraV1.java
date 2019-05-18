@@ -46,6 +46,8 @@ public class DijkstraV1 {
 
             distances[source] = 0;
             parents[source] = -1;
+            /*Remember: in this algorithm 'visited[source] = true' is not set at start of the algorithm
+            * */
             for (int i = 0; i < nNodes - 1; i++) {
 
                 //find the unvisited vertex with minimum distance
