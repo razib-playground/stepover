@@ -9,65 +9,31 @@ public class DeleteThis {
     public static void main(String[] args) throws FileNotFoundException {
 
         String projectDir = System.getProperty("user.home") + "/projects/stepover/algorithms";
-        System.setIn(new FileInputStream(new File(projectDir + "/resources/Dijkstra.in.txt")));
-        System.setOut(new PrintStream(new File(projectDir + "/resources/Dijkstra.out.txt")));
+        System.setIn(new FileInputStream(new File(projectDir + "/resources/DFS-BFS.in.txt")));
+        System.setOut(new PrintStream(new File(projectDir + "/resources/DFS-BFS.out.txt")));
         Scanner scanner = new Scanner(System.in);
 
         int testCase = scanner.nextInt();
         while (testCase-- > 0) {
             int nNodes = scanner.nextInt();
-            int nEdges = scanner.nextInt();
-            int[][] costs = new int[nNodes][nNodes];
+            int nEdged = scanner.nextInt();
 
-            for (int i = 0; i < nEdges; i++) {
+            List<Set<Integer>> adjacencyList = new ArrayList<>();
+            for (int i = 0; i < nNodes; i++) adjacencyList.add(new HashSet<>());
+
+            for (int i = 0; i < nEdged; i++) {
                 int u = scanner.nextInt() - 1;
                 int v = scanner.nextInt() - 1;
-                int w = scanner.nextInt();
-
-                if(costs[u][v]==0||(costs[u][v]!=0 && costs[u][v] > w)) costs[u][v] = w;
-                costs[v][u] = costs[u][v];
+                adjacencyList.get(u).add(v);
+                adjacencyList.get(v).add(u);
             }
-            int source = scanner.nextInt() - 1;
 
-            //dijkstra start
-            int[] distances = new int[nNodes];
-            int[] parents = new int[nNodes];
-            boolean[] visited = new boolean[nNodes];
-            Arrays.fill(distances, Integer.MAX_VALUE);
-
-            distances[source] = 0;
-            parents[source] = -1;
-            for (int i = 0; i < nNodes - 1; i++) {
-
-                int min = Integer.MAX_VALUE;
-                int index = 0;
-                for (int j = 0; j < nNodes; j++) {
-                    if (!visited[j] && distances[j] < min) {
-                        min = distances[j];
-                        index = j;
-                    }
-                }
-
-                visited[index] = true;
-                for (int j = 0; j < nNodes; j++) {
-                    if (!visited[j] && costs[index][j] != 0 && distances[index] != Integer.MAX_VALUE
-                            && distances[j] > distances[index] + costs[index][j]) {
-                        distances[j] = distances[index] + costs[index][j];
-                        parents[j] = index;
-                    }
-                }
-            }
-            //dijkstra end
-
-            for (int i = 0; i < nNodes; i++) {
-                if (i != source) {
-                    System.out.print(((distances[i] == Integer.MAX_VALUE) ? -1 : distances[i]) + " ");
-                }
-            }
-            System.out.println();
-
-            printPath(parents, nNodes - 1);
-            System.out.println("\n.........x.........x.........x.........x.........x.........\n");
+            printAdjacencyList(adjacencyList);
+            System.out.println("DFS traversal output:");
+            dfs(adjacencyList);
+            System.out.println("BFS traversal output:");
+            bfs(adjacencyList);
+            System.out.println(".........x.........x.........x.........x.........x.........x.........x.........\n\n");
         }
 
         System.setIn(new FileInputStream(FileDescriptor.in));
@@ -75,10 +41,67 @@ public class DeleteThis {
         scanner.close();
     }
 
-    private static void printPath(int[] parents, int index) {
-        if(parents[index] == -1) return;
-        printPath(parents, parents[index]);
-        System.out.print((parents[index]+ 1) + " ");
+    private static void bfs(List<Set<Integer>> adjacencyList) {
+        int nNodes = adjacencyList.size();
+        boolean[] visited = new boolean[nNodes];
+        Queue<Integer> queue = new LinkedList<>();
+
+        queue.add(0);
+        visited[0] = true;
+        while (!queue.isEmpty()) {
+            int u = queue.poll();
+            System.out.print((u + 1) + " ");
+
+            Set<Integer> neighbours = adjacencyList.get(u);
+            for (Integer v : neighbours) {
+                if (!visited[v]) {
+                    queue.add(v);
+                    visited[v] = true;
+                }
+            }
+        }
+        System.out.println();
+    }
+
+    private static void dfs(List<Set<Integer>> adjacencyList) {
+        int nNodes = adjacencyList.size();
+        boolean[] visited = new boolean[nNodes];
+        Stack<Integer> stack = new Stack<Integer>();
+
+        stack.push(0);
+        visited[0] = true;
+        while (!stack.isEmpty()) {
+            Integer u = stack.pop();
+            System.out.print((u + 1) + " ");
+
+            Set<Integer> neighbours = adjacencyList.get(u);
+            for (Integer v : neighbours) {
+                if (!visited[v]) {
+                    stack.push(v);
+                    visited[v]= true;
+                }
+            }
+        }
+        System.out.println();
+
+    }
+
+    private static void printAdjacencyList(List<Set<Integer>> adjacencyList) {
+
+        int nNodes = adjacencyList.size();
+
+        System.out.println("Adjacency List:");
+        for (int i = 0; i < nNodes; i++) {
+            Set<Integer> neighbours = adjacencyList.get(i);
+            int nNeighbours = neighbours.size();
+            int count = 0;
+            System.out.printf("%3d : [", (i + 1));
+            for (Integer v : neighbours) {
+                if (count++ < nNeighbours - 1) System.out.print((v + 1) + " ");
+                else System.out.print((v + 1));
+            }
+            System.out.println("]");
+        }
     }
 
 }
