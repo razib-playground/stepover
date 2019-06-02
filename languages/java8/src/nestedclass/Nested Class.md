@@ -67,7 +67,7 @@
   - only after the class definition code
 
 - it can not use method local **variables** and **parameters** : unless they are marked `final`
-  - but it's not completely true for java 8. Java 8 introduced *effectively final* .
+  - but it's not completely true for java 8. Java 8 introduced ***effectively final*** .
     - read more in [stackoverflow](https://stackoverflow.com/questions/38291734/accessing-local-variables-from-method-local-inner-class-in-which-we-declare-the)
 - only modifier a method local inner class can take : `abstract` an d`final` (but not both of them at the same time)
 - ***Questions:***
