@@ -3,7 +3,7 @@
 - class written within another class  (the **enclosing** class or **outer** class)
 - ***Classification***:
 
-![inner_classes](/home/razib/Dropbox/typora-notes/images/inner_classes.jpg)
+![inner_classes](./inner_classes.jpg)
 
 - also known as  : **_non-static inner class_**
 
