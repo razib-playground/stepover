@@ -14,7 +14,7 @@ class BigOuter {
     }
 }
 
-public class StaticNestedClass{
+public class StaticNestedClassTest{
     public static void main(String[] args) {
         System.out.println("Hello Word");
 
