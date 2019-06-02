@@ -16,9 +16,9 @@
       	- it could be `private`
        - it could be `abstract`, `final`
           - but not both `abstract` and `final` at the same time
-            	- `abstract` class are meant to be always subclass wheres, `final` classes can't never be subclassed. 
+            	- `abstract` class are meant to be always subclassed wheres, `final` classes can't never be subclassed. 
 
-- it has a special relationship with its **outer/enclosing** class - inner class can access all of the member of it's **outer/enclosing** class even it they are marked as `private` 
+- it has a special relationship with its **outer/enclosing** class - inner class can access all of the member of it's **outer/enclosing** class even if they are marked as `private` 
 
 - ***Code Snippet:***
 
@@ -44,7 +44,6 @@
 
   ```java
   //this reference
-  
   public class MyOuterClass{
       private int value = 25;
       
@@ -61,14 +60,14 @@
 
 ## <u>Method Local Inner Class</u>
 
-- defined within a method of an enclosing class
+- defined within a method of an **enclosing** class
 - to use it you must need to instantiate it 
   - only in the method where it has been declared (scope bounded to method)
   - only after the class definition code
 
 - it can not use method local **variables** and **parameters** : unless they are marked `final`
-  - but it's not completely true for java 8. Java 8 introduced ***effectively final*** .
-    - read more in [stackoverflow](https://stackoverflow.com/questions/38291734/accessing-local-variables-from-method-local-inner-class-in-which-we-declare-the)
+  - but it's not completely true for java 8. Java 8 introduced ***effectively final***. In java 8 it's not necessary to be the **variables** and **parameters** are `final` for method local inner class to access them. Java 8 gives bit relaxation here - **effectively final** also  work here.
+    - to know about **effectively final** read visit the [stackoverflow link ](https://stackoverflow.com/questions/38291734/accessing-local-variables-from-method-local-inner-class-in-which-we-declare-the)
 - only modifier a method local inner class can take : `abstract` an d`final` (but not both of them at the same time)
 - ***Questions:***
   - can a method local inner class use the enclosing class member like - method, fields (specially when they are private)?
@@ -137,7 +136,7 @@
    	- not considered as *inner class* 
    	- rather a top level nested class
 
- - because the nested class is static no - special relation to it's **enclosing** class
+ - because the nested class is static, it has no special relation to it's **enclosing** class
 
    	- it can not access any **non-static** member of it's **enclosing** class
 
