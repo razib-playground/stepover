@@ -1,6 +1,6 @@
-# Generic and Collections
+# <u>Generic and Collections</u>
 
-## The Motivation for Generics
+## <u>The Motivation for Generics</u>
 
 - consider the following 2 code snippet where generics are not used
 
