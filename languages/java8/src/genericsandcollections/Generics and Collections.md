@@ -1,6 +1,6 @@
-# <u>Generic and Collections</u>
+# Generic and Collections
 
-## <u>Why Generics  / The Motivation for Generics</u> {#motivation-link}
+## The Motivation for Generics
 
 - consider the following 2 code snippet where generics are not used
 
@@ -70,7 +70,7 @@
 
 ## <u>Advantage of Generics</u>
 
-- based on the [above discussion](#motivation-link) 
+- based on the [above discussion](#the-motivation-for-generics) 
   - 
 
 ## <u>Type Erasure and Generics</u>
