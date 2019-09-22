@@ -429,7 +429,7 @@
   
   ```java
     public void print(List<Animal> animals){} 
-    ```
+  ```
   
    - this will also not work, cause in Java [`List<Dog>` is not a `List<Animal>`.](https://stackoverflow.com/questions/2745265/is-listdog-a-subclass-of-listanimal-why-are-java-generics-not-implicitly-po)
   
@@ -448,7 +448,7 @@
              Animal[] animalsArray = dogsArray;//compile;could produce error at tuntime 
              animalsArray[0] = new Cat();//throws ArrayStoreException at runtime
              
-             ```
+           ```
   
    - **Unbound Wildcard <?>:** 
   
@@ -458,7 +458,7 @@
           public static void print(List<?> list) {
             for (Object each : list) System.out.println(each);
           }
-          ```
+        ```
   
       - **Note:**
   
@@ -475,7 +475,7 @@
           nums.add(12387L); //1; not compile
           nums.clear(); //2; compile
           nums.add(null); // compile is 'any unknown type'
-          ```
+        ```
   
          - 1 will not compile, cause we do not know that 'nums' is a `List<Integer>`
   
@@ -486,7 +486,7 @@
                  boolean add(E e);
              	void clear();
              }
-             ```
+           ```
   
    - **Upperboun Wildcard <? extends Type>:** 
   
@@ -509,24 +509,22 @@
           print(strings); //not compile
           print(animals); //not compile
           print(objects); //not compile
-          ```
+        ```
   
-         - 
+        ​	
   
-         - 
+       - <span style="color: red">*clearly <?> is equivalent to <? extends Object>* </span>     
   
-         - <span style="color: red">*clearly <?> is equivalent to <? extends Object>* </span>     
+       - *List<?> and List<Object> are not same*      
   
-         - *List<?> and List<Object> are not same*      
-          
-           - Some more example of upper bound uses     
-          
-             ```java
-           // List<Number> lst = new ArrayList<Integer>();  // Compilation Error
-             List<? extends Number> lst = new ArrayList<Integer>();
+         - Some more example of upper bound uses     
+           
+           ```java
+         // List<Number> lst = new ArrayList<Integer>();  // Compilation Error
+           List<? extends Number> lst = new ArrayList<Integer>();
            ```
   
-   - 
+      
   
    - **Lowerbound Wildcard <? super Type>:**
   
@@ -542,20 +540,24 @@
           Cat c1 = catList1.get(0); //not compile 'required Cat - found Animal'
           Animal c2 = catList1.get(0); //compile
           
-        List<? super Animal> catList2 = new ArrayList<Animal>();
+          List<? super Animal> catList2 = new ArrayList<Animal>();
           catList2.add(new Cat("cat34")); //compile
           Cat c3 = catList2.get(0); //not compile
-        Animal c4 = catList2.get(0); //not compile
+          Animal c4 = catList2.get(0); //not compile
           ```
-
+  
+        
+        ```
+  
           - you *can't* add a `Cat` to a `List<? extends Animal>` because you don't know it's a `List<Cat>`. You can retrieve a value and know that it will be an `Animal`, but you can't add arbitrary animals.     
-          - The reverse is true for `List<? super Animal>` - in that case you can add an `Animal` to it safely, but you don't know anything about what might be retrieved from it, because it could be a `List<Object>`  
-  
-         
-  
+    - The reverse is true for `List<? super Animal>` - in that case you can add an `Animal` to it safely, but you don't know anything about what might be retrieved from it, because it could be a `List<Object>`  
+       
+        
+       
        - <u>**Fun 2:**</u>
        
          
+         ```
 
 ### <u>Java Generics FAQs and Resources</u>
 
