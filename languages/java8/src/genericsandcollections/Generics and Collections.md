@@ -543,8 +543,7 @@
           catList2.add(new Cat("cat34")); //compile
           Cat c3 = catList2.get(0); //not compile
           Animal c4 = catList2.get(0); //not compile
-          
-    ```
+          ```
           
           - you *can't* add a `Cat` to a `List<? extends Animal>` because you don't know it's a `List<Cat>`. You can retrieve a value and know that it will be an `Animal`, but you can't add arbitrary animals.     
     
