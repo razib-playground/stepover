@@ -529,7 +529,7 @@
 
      - [**More Fun with Generics:**](https://docs.oracle.com/javase/tutorial/extra/generics/morefun.html)
 
-        - **Fun 1:** 
+        - **<u>Fun 1:</u>** 
 
           ```java
           List<? extends Animal> catList1 = new ArrayList<Cat>();
@@ -545,15 +545,13 @@
 
           
         
-  - you *can't* add a `Cat` to a `List<? extends Animal>` because you don't know it's a `List<Cat>`. You can retrieve a value and know that it will be an `Animal`, but you can't add arbitrary animals.   
+- you *can't* add a `Cat` to a `List<? extends Animal>` because you don't know it's a `List<Cat>`. You can retrieve a value and know that it will be an `Animal`, but you can't add arbitrary animals.   
        
-    
-       
-         -	The reverse is true for `List<? super Animal>` - in that case you can add an `Animal` to it safely, but you don't know anything about what might be retrieved from it, because it could be a `List<Object>`  
+- The reverse is true for `List<? super Animal>` - in that case you can add an `Animal` to it safely, but you don't know anything about what might be retrieved from it, because it could be a `List<Object>`  
        
          
        
-       - **Fun 2:** 
+       - <u>**Fun 2:</u>** 
        
          
 
