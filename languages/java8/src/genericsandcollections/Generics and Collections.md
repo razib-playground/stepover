@@ -529,7 +529,7 @@
   
      	-	 The wildcard `<? super Type>` matches ***Type and  its super-types***. In other words, it specifies the lower bound.
   
-     - [**More Fun with Generics:**](https://docs.oracle.com/javase/tutorial/extra/generics/morefun.html)
+     - <u>[**More Fun with Generics:**](https://docs.oracle.com/javase/tutorial/extra/generics/morefun.html)</u>
   
         - **<u>Fun 1:</u>** 
   
@@ -543,23 +543,20 @@
           catList2.add(new Cat("cat34")); //compile
           Cat c3 = catList2.get(0); //not compile
           Animal c4 = catList2.get(0); //not compile
-          ```
-  
-        
-        ```
-  
+          
+    ```
+          
           - you *can't* add a `Cat` to a `List<? extends Animal>` because you don't know it's a `List<Cat>`. You can retrieve a value and know that it will be an `Animal`, but you can't add arbitrary animals.     
-        ```
-    - The reverse is true for `List<? super Animal>` - in that case you can add an `Animal` to it safely, but you don't know anything about what might be retrieved from it, because it could be a `List<Object>`  
-      
+    
+            - The reverse is true for `List<? super Animal>` - in that case you can add an `Animal` to it safely, but you don't know anything about what might be retrieved from it, because it could be a `List<Object>`  
         
-      
-       - <u>**Fun 2:**</u>
+     
+     - <u>**Fun 2:**</u>
+     
        
-         
-         ```
-         
-         ```
+       ```
+       
+       ```
 
 ### <u>Java Generics FAQs and Resources</u>
 
@@ -570,13 +567,14 @@
 - Why [`List<Dog>` is not `List<Animal>`](https://stackoverflow.com/questions/2745265/is-listdog-a-subclass-of-listanimal-why-are-java-generics-not-implicitly-po) but [`Dog[]` is `Animal[]`](https://stackoverflow.com/questions/3246137/java-generics-cannot-cast-listsubclass-to-listsuperclass?noredirect=1&lq=1)
 
   ```java
-      // All compiles but throws ArrayStoreException at runtime at last line
-      Dog[] dogs = new Dog[10];
-      Animal[] animals = dogs; // compiles
-      animals[0] = new Cat(); // throws ArrayStoreException at runtime
+  // All compiles but throws ArrayStoreException at runtime at last line
+  Dog[] dogs = new Dog[10];
+  Animal[] animals = dogs; // compiles
+  animals[0] = new Cat(); // throws ArrayStoreException at runtime
   ```
 
--  
+  
+
 
 ## <u>Some Concepts</u>
 
