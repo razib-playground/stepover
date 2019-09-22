@@ -423,26 +423,23 @@
     ```
 
     - obviously	 1 and 2 works. But we are looking for a more elegant solutions
-
-    - 2 and 3 (when written simultaneously) will not even compile. Because type erasure removes the *actual type parameters* - `Dog` and `Cat`. So for runtime these will be same `Object` -  `List`
-
-      
-
-  - **attempt-2:**  Parameterizing super class 
+  - 2 and 3 (when written simultaneously) will not even compile. Because type erasure removes the *actual type parameters* - `Dog` and `Cat`. So for runtime these will be same `Object` -  `List`
   
-    ```java
-  public void print(List<Animal> animals){} 
+- **attempt-2:**  Parameterizing super class 
+  
+  ```java
+    public void print(List<Animal> animals){} 
     ```
-
-     - this will also not work, cause in Java [`List<Dog>` is not a `List<Animal>`.](https://stackoverflow.com/questions/2745265/is-listdog-a-subclass-of-listanimal-why-are-java-generics-not-implicitly-po)
-
-        -  **Note:** 
-
-           - though `List<Dog>` is not a `List<Animal>` 
-
-           - but [`Dog[]` is `Animal[]`](https://stackoverflow.com/questions/2745265/is-listdog-a-subclass-of-listanimal-why-are-java-generics-not-implicitly-po/46496077#46496077) that means 
   
-             ```java
+   - this will also not work, cause in Java [`List<Dog>` is not a `List<Animal>`.](https://stackoverflow.com/questions/2745265/is-listdog-a-subclass-of-listanimal-why-are-java-generics-not-implicitly-po)
+  
+      -  **Note:** 
+  
+         - though `List<Dog>` is not a `List<Animal>` 
+  
+         - but [`Dog[]` is `Animal[]`](https://stackoverflow.com/questions/2745265/is-listdog-a-subclass-of-listanimal-why-are-java-generics-not-implicitly-po/46496077#46496077) that means 
+  
+           ```java
              List<Animal> animals = new ArrayList<>();
              List<Dog> dogs = new ArrayList<>();
              animals = dogs //compilation error
@@ -450,22 +447,22 @@
              Dog[] dogsArray = new Dog[10];
              Animal[] animalsArray = dogsArray;//compile;could produce error at tuntime 
              animalsArray[0] = new Cat();//throws ArrayStoreException at runtime
-           
+             
              ```
-
-     - **Unbound Wildcard <?>:** 
-
-        - To resolve this problem, a wildcard (`?`) is provided in generics, which stands for <u>***any unknown type***</u>. For example, we can rewrite our `print()` as follows to accept a `List` of any unknown type.
   
-          ```java
+   - **Unbound Wildcard <?>:** 
+  
+      - To resolve this problem, a wildcard (`?`) is provided in generics, which stands for <u>***any unknown type***</u>. For example, we can rewrite our `print()` as follows to accept a `List` of any unknown type.
+  
+        ```java
           public static void print(List<?> list) {
             for (Object each : list) System.out.println(each);
-        }
+          }
           ```
-
-        - **Note:**
   
-          ```java
+      - **Note:**
+  
+        ```java
           List<?> strings = new ArrayList<String>(); //compiles
           List<?> cats = new ArrayList<Cat>();  //compiles
           List<?> dogs = new ArrayList<Dog>(); //compiles
@@ -477,25 +474,25 @@
           List<?> nums = new ArrayList<Long>(); //compile
           nums.add(12387L); //1; not compile
           nums.clear(); //2; compile
-        nums.add(null); // compile is 'any unknown type'
+          nums.add(null); // compile is 'any unknown type'
           ```
-
-           - 1 will not compile, cause we do not know that 'nums' is a `List<Integer>`
-
-           - 2 will compile `clear()` methods doesn't depends on generic parameter types 
   
-             ```java
+         - 1 will not compile, cause we do not know that 'nums' is a `List<Integer>`
+  
+         - 2 will compile `clear()` methods doesn't depends on generic parameter types 
+  
+           ```java
              public interface List<E> extends Collection<E> {
                  boolean add(E e);
              	void clear();
-           }
+             }
              ```
-
-     - **Upperboun Wildcard <? extends Type>:** 
-
-        -  `<? extends Type>` stands for ***Type and its sub-types***. For example - `<? extends Number>` means - ''***Number and its sub-types***'' 	
   
-          ```java
+   - **Upperboun Wildcard <? extends Type>:** 
+  
+      -  `<? extends Type>` stands for ***Type and its sub-types***. For example - `<? extends Number>` means - ''***Number and its sub-types***'' 	
+  
+        ```java
           public static void print(List<? extends Number> list) {
             for (Object o : list) System.out.println(o);
           }
@@ -511,29 +508,29 @@
           print(doubles); //compile
           print(strings); //not compile
           print(animals); //not compile
-        print(objects); //not compile
+          print(objects); //not compile
           ```
-
-           - <span style="color: red">*clearly <?> is equivalent to <? extends Object>* </span> 
-
-           - *List<?> and List<Object> are not same* 
-
-           - Some more example of upper bound uses:
   
-             ```java
+         - <span style="color: red">*clearly <?> is equivalent to <? extends Object>* </span> 
+  
+         - *List<?> and List<Object> are not same* 
+  
+         - Some more example of upper bound uses:
+  
+           ```java
              // List<Number> lst = new ArrayList<Integer>();  // Compilation Error
-           List<? extends Number> lst = new ArrayList<Integer>();
+             List<? extends Number> lst = new ArrayList<Integer>();
              ```
-
-     - **Lowerbound Wildcard <? super Type>:**
-
-       	-	 The wildcard `<? super Type>` matches ***Type and  its super-types***. In other words, it specifies the lower bound.
-
-     - [**More Fun with Generics:**](https://docs.oracle.com/javase/tutorial/extra/generics/morefun.html)
-
-        - **<u>Fun 1:</u>** 
   
-          ```java
+   - **Lowerbound Wildcard <? super Type>:**
+  
+     	-	 The wildcard `<? super Type>` matches ***Type and  its super-types***. In other words, it specifies the lower bound.
+  
+   - [**More Fun with Generics:**](https://docs.oracle.com/javase/tutorial/extra/generics/morefun.html)
+  
+      - **<u>Fun 1:</u>** 
+  
+        ```java
           List<? extends Animal> catList1 = new ArrayList<Cat>();
           catList1.add(new Cat("cat33")); //not compile; don't know it's a list of cat (List<Cat>)
           Cat c1 = catList1.get(0); //not compile 'required Cat - found Animal'
@@ -542,15 +539,15 @@
           List<? super Animal> catList2 = new ArrayList<Animal>();
           catList2.add(new Cat("cat34")); //compile
           Cat c3 = catList2.get(0); //not compile
-        Animal c4 = catList2.get(0); //not compile
+          Animal c4 = catList2.get(0); //not compile
           ```
   
         - you *can't* add a `Cat` to a `List<? extends Animal>` because you don't know it's a `List<Cat>`. You can retrieve a value and know that it will be an `Animal`, but you can't add arbitrary animals.     
           - The reverse is true for `List<? super Animal>` - in that case you can add an `Animal` to it safely, but you don't know anything about what might be retrieved from it, because it could be a `List<Object>`  
-
-         
   
-       - <u>**Fun 2:**</u>
+       
+  
+     - <u>**Fun 2:**</u>
        
          
 
