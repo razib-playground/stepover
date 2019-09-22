@@ -422,7 +422,7 @@
     public void print(List<Cat> cats){} //4
     ```
 
-    - obviously 1 and 2 works. But we are looking for a more elegant solutions          
+  - obviously 1 and 2 works. But we are looking for a more elegant solutions          
 
   - 2 and 3 (when written simultaneously) will not even compile. Because type erasure removes the *actual type parameters* - `Dog` and `Cat`. So for runtime these will be same `Object` -  `List`
 
