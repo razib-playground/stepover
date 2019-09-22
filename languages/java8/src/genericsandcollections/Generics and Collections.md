@@ -511,43 +511,49 @@
           print(objects); //not compile
           ```
   
-         - <span style="color: red">*clearly <?> is equivalent to <? extends Object>* </span> 
+         - 
   
-         - *List<?> and List<Object> are not same* 
+         - 
   
-         - Some more example of upper bound uses:
+         - <span style="color: red">*clearly <?> is equivalent to <? extends Object>* </span>     
   
-           ```java
-             // List<Number> lst = new ArrayList<Integer>();  // Compilation Error
+         - *List<?> and List<Object> are not same*      
+          
+           - Some more example of upper bound uses     
+          
+             ```java
+           // List<Number> lst = new ArrayList<Integer>();  // Compilation Error
              List<? extends Number> lst = new ArrayList<Integer>();
-             ```
+           ```
+  
+   - 
   
    - **Lowerbound Wildcard <? super Type>:**
   
      	-	 The wildcard `<? super Type>` matches ***Type and  its super-types***. In other words, it specifies the lower bound.
   
-   - [**More Fun with Generics:**](https://docs.oracle.com/javase/tutorial/extra/generics/morefun.html)
+     - [**More Fun with Generics:**](https://docs.oracle.com/javase/tutorial/extra/generics/morefun.html)
   
-      - **<u>Fun 1:</u>** 
+        - **<u>Fun 1:</u>** 
   
-        ```java
+          ```java
           List<? extends Animal> catList1 = new ArrayList<Cat>();
           catList1.add(new Cat("cat33")); //not compile; don't know it's a list of cat (List<Cat>)
           Cat c1 = catList1.get(0); //not compile 'required Cat - found Animal'
           Animal c2 = catList1.get(0); //compile
           
-          List<? super Animal> catList2 = new ArrayList<Animal>();
+        List<? super Animal> catList2 = new ArrayList<Animal>();
           catList2.add(new Cat("cat34")); //compile
           Cat c3 = catList2.get(0); //not compile
-          Animal c4 = catList2.get(0); //not compile
+        Animal c4 = catList2.get(0); //not compile
           ```
-  
-        - you *can't* add a `Cat` to a `List<? extends Animal>` because you don't know it's a `List<Cat>`. You can retrieve a value and know that it will be an `Animal`, but you can't add arbitrary animals.     
+
+          - you *can't* add a `Cat` to a `List<? extends Animal>` because you don't know it's a `List<Cat>`. You can retrieve a value and know that it will be an `Animal`, but you can't add arbitrary animals.     
           - The reverse is true for `List<? super Animal>` - in that case you can add an `Animal` to it safely, but you don't know anything about what might be retrieved from it, because it could be a `List<Object>`  
   
-       
+         
   
-     - <u>**Fun 2:**</u>
+       - <u>**Fun 2:**</u>
        
          
 
