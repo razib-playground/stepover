@@ -545,9 +545,10 @@
 
           
         
-  - you *can't* add a `Cat` to a `List<? extends Animal>` because you don't know it's a `List<Cat>`. You can retrieve a value and know that it will be an `Animal`, but you can't add arbitrary animals.   
-         - The reverse is true for `List<? super Animal>` - in that case you can add an `Animal` to it safely, but you don't know anything about what might be retrieved from it, because it could be a `List<Object>`  
-
+- you *can't* add a `Cat` to a `List<? extends Animal>` because you don't know it's a `List<Cat>`. You can retrieve a value and know that it will be an `Animal`, but you can't add arbitrary animals.     
+       
+- The reverse is true for `List<? super Animal>` - in that case you can add an `Animal` to it safely, but you don't know anything about what might be retrieved from it, because it could be a `List<Object>`  
+       
          
        
        - <u>**Fun 2:**</u>
