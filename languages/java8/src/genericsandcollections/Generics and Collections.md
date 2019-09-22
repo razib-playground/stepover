@@ -514,9 +514,9 @@
   
        - <span style="color: red">*clearly <?> is equivalent to <? extends Object>* </span>  
   
-       - ***List<?>*** and ***List<Object>*** are not same    
+       - **List<?>** and **List<Object>** are not same    
   
-      - Some more example of upper bound uses     
+       - Some more example of upper bound uses     
         
           ```java
            //List<Number> lst = new ArrayList<Integer>();  // Compilation Error
