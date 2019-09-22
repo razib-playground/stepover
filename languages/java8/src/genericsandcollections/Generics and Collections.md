@@ -392,7 +392,8 @@
     List<String> stringList = Generics.fromArrayToList(intArray, Object::toString);
     ```
 
-- 
+  
+
 
 ### <u>Generic Wildcard</u>
 
