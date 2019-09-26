@@ -519,8 +519,8 @@
         - Some more example of upper bound
         
           ```java
-          //List<Number> lst = new ArrayList<Integer>();  // Compilation Error
-           List<? extends Number> lst = new ArrayList<Integer>();
+          //List<Number> numList = new ArrayList<Integer>();  // Compilation Error
+           List<? extends Number> numList = new ArrayList<Integer>();
           ```
         
           
@@ -535,12 +535,12 @@
   
           ```java
           List<? extends Animal> catList1 = new ArrayList<Cat>();
-          catList1.add(new Cat("cat33")); //not compile; don't know it's a list of cat (List<Cat>)
+          catList1.add(new Cat("Tom")); //not compile; don't know it's a list of cat (List<Cat>)
           Cat c1 = catList1.get(0); //not compile 'required Cat - found Animal'
           Animal c2 = catList1.get(0); //compile
           
           List<? super Animal> catList2 = new ArrayList<Animal>();
-          catList2.add(new Cat("cat34")); //compile
+          catList2.add(new Cat("Simba")); //compile
           Cat c3 = catList2.get(0); //not compile
           Animal c4 = catList2.get(0); //not compile
           ```
