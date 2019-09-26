@@ -474,10 +474,10 @@
           List<?> nums = new ArrayList<Long>(); //compile
           nums.add(12387L); //1; not compile
           nums.clear(); //2; compile
-          nums.add(null); // compile is 'any unknown type'
+          nums.add(null); // compile; null is 'any unknown type'
         ```
   
-         - 1 will not compile, cause we do not know that 'nums' is a `List<Integer>`
+         - 1 will not compile, cause we do not know that 'nums' is a `List<Long>`
   
          - 2 will compile `clear()` methods doesn't depends on generic parameter types 
   
@@ -546,10 +546,9 @@
           ```
           
           - you *can't* add a `Cat` to a `List<? extends Animal>` because you don't know it's a `List<Cat>`. You can retrieve a value and know that it will be an `Animal`, but you can't add arbitrary animals.     
-    
+        
           - The reverse is true for `List<? super Animal>` - in that case you can add an `Animal` to it safely, but you don't know anything about what might be retrieved from it, because it could be a `List<Object>`  
         
-     
      - <u>**Fun 2:**</u>
      
 
