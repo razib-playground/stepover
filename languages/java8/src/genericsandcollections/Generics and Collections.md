@@ -411,7 +411,7 @@
 
 - `Animal`, `Cat`, `Dog` all are  `Object` 
 
-- now we want to write a single print Method that could able to print `List<Cat>` and `List<Dog>`
+- now we want to write a single `print()` method that could able to print `List<Cat>` and `List<Dog>`
 
   - **attempt-1:**  method overloading (though not a single method) - hope it work
 
