@@ -514,7 +514,7 @@
         
         - *clearly <?> is equivalent to <? extends Object>* 
         
-        - List<?> and List<Object> are not same 
+        - `List<?>` and `List<Object>` are not same 
         
         - Some more example of upper bound
         
