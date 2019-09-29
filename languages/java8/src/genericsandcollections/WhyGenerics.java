@@ -1,10 +1,7 @@
 package genericsandcollections;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 class Apple {
 
@@ -60,26 +57,5 @@ public class WhyGenerics {
         //the same list for different data types.
 
 
-
-        Integer[] intArray = {1, 2, 3, 4, 5};
-        List<String> stringList
-                = fromArrayToList(intArray, Object::toString);
-
-
-    }
-
-    public static <T, G> List<G> fromArrayToList(T[] a, Function<T, G> mapperFunction) {
-
-        return Arrays.stream(a)
-                .map(mapperFunction)
-                .collect(Collectors.toList());
-    }
-
-    public static void printList(List<Object> list){
-        for (Object o : list) System.out.println(o);
-    }
-
-    public static void printListV2(List<?> list){
-        for (Object o : list) System.out.println(o);
     }
 }
