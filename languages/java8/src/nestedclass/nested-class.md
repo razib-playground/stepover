@@ -30,7 +30,7 @@
       }
       
       //case1: from inside the enclosing outer class
-      MyInnerClass mic = new MyInnerClass
+      MyInnerClass mic = new MyInnerClass()
   }
   
   //case 2: from outside of the MyOuterClass
