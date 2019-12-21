@@ -34,7 +34,7 @@
   }
   
   //case 2: from outside of the MyOuterClass
-  MyOuterClass moc = new MyCouterClass();
+  MyOuterClass moc = new MyOuterClass();
   MyOuterClass.MyInnerClass = moc.new MyInnerClass();
   ```
 
@@ -134,7 +134,7 @@
  - resides directly inside the **enclosing** class with `static` modifier
 
    	- not considered as *inner class* 
-   	- rather a top level nested class
+      	- rather a top level nested class
 
  - because the nested class is static, it has no special relation to it's **enclosing** class
 
