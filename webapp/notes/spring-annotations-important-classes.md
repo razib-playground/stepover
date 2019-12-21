@@ -14,7 +14,7 @@
 
 
 
-<p style="text-align:center; color:gray; font-size:12px; margin-bottom:0px; padding-bottom:0px;">Webapplication/J2EE</p>
+<p align="center" style="color:gray; font-size:12px; margin-bottom:0px; padding-bottom:0px;">Webapplication/J2EE</p>
 <hr/>
 
 
@@ -67,7 +67,7 @@
 
 
 
-<div style="text-align:center; color:gray; font-size:12px; margin-bottom:0px; padding-bottom:0px;">Spring Concepts</div>
+<p align="center" style="color:gray; font-size:12px; margin-bottom:0px; padding-bottom:0px;">Spring Concept</p>
 <hr/>
 
 ##  JPA/Hibernate
@@ -88,7 +88,7 @@
 
 
 
-<div style="text-align:center; color:gray; font-size:12px; margin-bottom:0px; padding-bottom:0px;">JPA/Hibernate</div>
+<p align="center" style="color:gray; font-size:12px; margin-bottom:0px; padding-bottom:0px;">JPA/Hibernate</p>
 <hr/>
 
 
@@ -210,7 +210,7 @@
 
     
 
-<div style="text-align:center; color:gray; font-size:12px; margin-bottom:0px; padding-bottom:0px;">Spring Annotations by Group</div>
+<p align="center" style="color:gray; font-size:12px; margin-bottom:0px; padding-bottom:0px;">Spring Annotation by Group</p>
 <hr/>
 
 
@@ -335,7 +335,7 @@ public String showBookDetails(@PathVariable String isbnNumber, Model model){
 
 
 
-<div style="text-align:center; color:gray; font-size:12px; margin-bottom:0px; padding-bottom:0px;">Some Useful Annotation (Spring, JPA, Hibernate etc)</div>
+<p align="center" style="color:gray; font-size:12px; margin-bottom:0px; padding-bottom:0px;">Some Useful Annotation (Spring, JPA, Hibernate etc)</p>
 <hr/> 
 
 
