@@ -14,9 +14,8 @@
 
 
 
-<div style="text-align:center; color:gray; font-size:12px; margin-bottom:0px; padding-bottom:0px;">Webapplication/J2EE</div>
+<p style="text-align:center; color:gray; font-size:12px; margin-bottom:0px; padding-bottom:0px;">Webapplication/J2EE</p>
 <hr/>
-
 
 
 ## Spring Concepts
@@ -71,7 +70,6 @@
 <div style="text-align:center; color:gray; font-size:12px; margin-bottom:0px; padding-bottom:0px;">Spring Concepts</div>
 <hr/>
 
-
 ##  JPA/Hibernate
 
 ### [Persistence Context](https://stackoverflow.com/questions/19930152/what-is-persistence-context)
@@ -92,7 +90,6 @@
 
 <div style="text-align:center; color:gray; font-size:12px; margin-bottom:0px; padding-bottom:0px;">JPA/Hibernate</div>
 <hr/>
-
 
 
 
@@ -218,7 +215,6 @@
 
 
 
-
 ## Some Useful Annotations(Spring, JPA, Hibernate etc)
 
 ### @Configuration 
@@ -341,7 +337,6 @@ public String showBookDetails(@PathVariable String isbnNumber, Model model){
 
 <div style="text-align:center; color:gray; font-size:12px; margin-bottom:0px; padding-bottom:0px;">Some Useful Annotation (Spring, JPA, Hibernate etc)</div>
 <hr/> 
-
 
 
 
